@@ -79,7 +79,6 @@
 <main class="w-100">
     <section class="container-fluid d-flex justify-content-center" id="new-open">
         <div id="new-open-container" class="position-relative" style="width: 1100px;">
-            <!-- 제목 섹션 -->
             <div class="row mt-5">
                 <div class="fs-3 fw-bold">신규 오픈</div>
             </div>
@@ -88,10 +87,8 @@
                 <div><a href="#" class="fs-6 fw-bold text-dark">더보기></a></div>
             </div>
 
-            <!-- 카드 래퍼 추가 -->
             <div class="cards-wrapper overflow-hidden position-relative" style="width: 1100px;">
                 <div class="cards new-open d-flex mt-2" style="width: 2200px;">
-                    <!-- 카드들: 1100px의 컨테이너에 5개만 보이고 나머지는 숨겨질 것입니다 -->
                     <div class="card new-open">
                         <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg" class="card-img-top" alt="...">
                         <div class="card-body w-100">

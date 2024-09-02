@@ -12,7 +12,7 @@
     <div class="d-flex row p-0" id="sticky">
         <ul class="nav justify-content-end pt-3" id="top-nav">
             <li class="nav-item" >
-                <a class="nav-link text-black active" href="#">로그인</a>
+                <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/">로그인</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-black" href="#">회원가입</a>
