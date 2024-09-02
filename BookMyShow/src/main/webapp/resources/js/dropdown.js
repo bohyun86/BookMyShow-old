@@ -1,9 +1,11 @@
 // JavaScript to toggle dropdown menu visibility
-document.getElementById('cs-dropdown').addEventListener('click', function(event) {
+document.getElementById('cs-dropdown').addEventListener('mouseover', function(event) {
     event.preventDefault(); // Prevent default link behavior
     const dropdownMenu = document.getElementById('cs-dropdown-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
+
+
 
 // Hide the dropdown when clicking outside
 document.addEventListener('click', function(event) {
