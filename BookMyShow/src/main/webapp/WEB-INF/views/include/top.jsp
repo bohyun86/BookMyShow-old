@@ -12,7 +12,7 @@
     <div class="d-flex row p-0" id="sticky">
         <ul class="nav justify-content-end pt-3" id="top-nav">
             <li class="nav-item" >
-                <a class="nav-link text-black active" href="#">로그인</a>
+                <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/">로그인</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-black" href="#">회원가입</a>
@@ -30,7 +30,7 @@
             </li>
         </ul>
         <ul class="nav justify-content-start align-items-center">
-            <li class="nav-item"><a class="navbar-brand ms-3 fs-4 fst-italic" href="${pageContext.request.contextPath}/main/main">예매하다</a></li>
+            <li class="nav-item"><a class="navbar-brand ms-3 fs-4 fst-italic" href="${pageContext.request.contextPath}/main/">예매하다</a></li>
             <li class="nav-item ms-5">
                 <form class="d-flex border border-2 border-gray rounded-5 px-2">
                     <input class="bg-transparent text-gray border-0" aria-label="Search">

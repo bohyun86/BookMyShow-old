@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Log4j2
-@RequestMapping("/main/*")
 public class MainController {
 
-    @GetMapping("/main")
-    public void home() {
+    @RequestMapping("/main")
+    public String home() {
         log.info("main success");
+        
+        return "/main/main";
     }
 
 
