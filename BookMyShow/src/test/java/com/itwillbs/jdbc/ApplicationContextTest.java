@@ -16,10 +16,6 @@ public class ApplicationContextTest {
 
     private final ApplicationContext ctx;
 
-    // ApplicationContext 객체가 제대로 생성되었는지 확인
-    // ApplicationContext 객체는 스프링 컨테이너의 루트 객체이다.
-    // 스프링 컨테이너는 스프링 프레임워크의 핵심이며, 스프링 애플리케이션의 모든 객체를 생성, 관리한다.
-
     @Test
     public void testExist() {
         log.info(ctx);
