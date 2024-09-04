@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Log4j2
-@RequestMapping("/admin")
+@RequestMapping("/admin/*")
 public class AdminController {
 
     @GetMapping("/main")
@@ -16,4 +16,25 @@ public class AdminController {
 
         return "/admin/main";
     }
-}
+    
+    
+    @GetMapping("/search")
+    public String search() {
+    	log.info("admin search success");
+    	return "/admin/search";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}//

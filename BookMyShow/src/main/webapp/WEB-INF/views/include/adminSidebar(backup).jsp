@@ -20,53 +20,55 @@
                     <li class="nav-divider">
                         MENU
                     </li>
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">메뉴 1</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                           data-target="#submenu-2" aria-controls="submenu-3">뮤지컬관리</a>
+                           data-target="#submenu-2" aria-controls="submenu-3">메뉴 2(collapse)</a>
                         <div id="submenu-2" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="${pageContext.request.contextPath}/../admin/search">뮤지컬검색</a>
+                                    <a class="nav-link" href="#">하위메뉴1</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="${pageContext.request.contextPath}/../admin/registration">뮤지컬수정/삭제</a>
+                                    <a class="nav-link" href="#">하위메뉴2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴4</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴5</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    
-                    
                     <li class="nav-item ">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                           data-target="#submenu-3" aria-controls="submenu-3">파트너관리</a>
+                           data-target="#submenu-3" aria-controls="submenu-3">메뉴 3(collapse)</a>
                         <div id="submenu-3" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">파트너검색</a>
+                                    <a class="nav-link" href="#">하위메뉴1</a>
                                 </li>
-                               
-                            </ul>
-                        </div>
-                    </li>
-                    
-                     <li class="nav-item ">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
-                           data-target="#submenu-4" aria-controls="submenu-4">회원관리</a>
-                        <div id="submenu-4" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">회원검색</a>
+                                    <a class="nav-link" href="#">하위메뉴2</a>
                                 </li>
-                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴4</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴5</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">고객센터</a>
-                    </li>
-                    
                 </ul>
             </div>
         </nav>
