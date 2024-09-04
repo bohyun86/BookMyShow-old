@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.list-group-item:nth-child(4)::after, .list-group-item:nth-child(6)::after { 
+   	 		content: ""; 
+    		display: block; 
+     		border-bottom: 1px solid #ddd; 
+     		margin: 10px 0;
+ 		} 
