@@ -52,23 +52,23 @@
                             <h2 class="pageheader-title">뮤지컬 검색 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                <form action="#" name="search_mp" class="form-inline">
 									
-                                	<select name="mp_select" class="select_lbl">
-                                		<option value="">::검색 유형::</option>
-                                		<option value="musical">뮤지컬 제목</option>
-                                		<option value="partner">파트너 ID</option>
-                                	
-                                	</select>
-                                	<input type="text" name="findKeyword" class="select_lbl2">
-                                	<button class ="btn_succes">검색</button>
-                                	                   	
-                                	
-                                </form>
+                                
+                                
+                                <form name="findF" action="#" class="form-inline">
+									<select name="findType" class="form-control mr-2">
+										<option value="">::검색 유형::</option>
+										<option value="1">파트너ID</option>
+										<option value="2">뮤지컬제목</option>
+								</select>
+									<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" 
+									class="form-control mr-2">
+									<button class="btn btn-success" >검 색</a></button>
+								</form>
+                
                         </div>
                     </div>
                 </div>
-                
                 
 
 

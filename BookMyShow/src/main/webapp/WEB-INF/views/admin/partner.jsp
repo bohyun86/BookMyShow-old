@@ -66,7 +66,18 @@
                  
 <!-- ==================================================== -->
 
-				
+<%-- 				<h1 class="text-center m-3">[검색어:<%=findKeyword %> ] 검색 결과</h1>				 --%>
+<form name="findF" action="#" class="form-inline">
+
+	<select name="findType" class="form-control mr-2">
+		<option value="">::검색 유형::</option>
+		<option value="1">회원이름</option>
+		<option value="2">아이디</option>
+	</select>
+	<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" 
+	class="form-control mr-2">
+	<button class="btn btn-success">검 색</button>
+</form>
 				
 
 

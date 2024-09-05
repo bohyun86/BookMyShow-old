@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">뮤지컬 수정/삭제 페이지 </h2>
+                            <h2 class="pageheader-title">수정할 뮤지컬 선택</h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
@@ -67,9 +67,60 @@
 <!-- ==================================================== -->
 
 				
+<div class="list-group">
 
+  <button type="button" class="list-group-item list-group-item-action " aria-current="true">
+   <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg" class="img-thumbnail" alt="new1" style="width: 100px">
+   옥탑방 고양이
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  </div>
+  </button>
+ 
+  <button type="button" class="list-group-item list-group-item-action">
+   <img src="${pageContext.request.contextPath}/resources/images/poster/newopen2.jpg" class="img-thumbnail" alt="new2" style="width: 100px">
+   최상급 요트에서 특별한 여행 추억 쌓기!
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a class="btn btn-outline-primary btn-sm" href="editPro.jsp" role="button">수정</a>
+  </div>
+  </button>
+  
+  
+  <button type="button" class="list-group-item list-group-item-action">
+   <img src="${pageContext.request.contextPath}/resources/images/poster/newopen3.jpg" class="img-thumbnail" alt="new3" style="width: 100px">
+  어린이 CAT
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  </div>
+   </button>
+  
+  <button type="button" class="list-group-item list-group-item-action">
+   <img src="${pageContext.request.contextPath}/resources/images/poster/newopen4.jpg" class="img-thumbnail" alt="new4" style="width: 100px">
+   썸데이
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  </div>
+  </button>
 
+</div>
 
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 					<div class="ecommerce-widget"> 
 
 <!--                     <div class="row"> -->

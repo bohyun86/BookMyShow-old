@@ -1,10 +1,20 @@
 package com.itwillbs.controller;
 
 import lombok.extern.log4j.Log4j2;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.itwillbs.domain.MemberDTO;
 
 @Controller
 @Log4j2
@@ -14,6 +24,8 @@ public class AdminController {
     @GetMapping("/main")
     public String home() {
         log.info("admin main success");
+        
+        
 
         return "/admin/main";
     }
@@ -25,14 +37,9 @@ public class AdminController {
     	return "/admin/search";
     }
     
-    @PostMapping("/searchPro")
-    public String searchPro() {
-    	log.info("admin search success");
+    
     	
     	
-    	
-    	return "redirect:/admin/submit";
-    }
     
     @GetMapping("/submit")
     public String submit() {
@@ -45,6 +52,13 @@ public class AdminController {
     	log.info("admin edit success");
     	return "/admin/edit";
     }
+    
+    @GetMapping("/editPro")
+    public String editPro() {
+    	log.info("admin editPro success");
+    	return "/admin/editPro";
+    }
+    
     
     @GetMapping("/partner")
     public String partner() {
@@ -59,6 +73,10 @@ public class AdminController {
     	log.info("admin member_search success");
     	return "/admin/member";
     }
+    
+    
+    
+    
     
     @GetMapping("/support")
     public String support() {
