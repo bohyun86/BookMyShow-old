@@ -1,7 +1,79 @@
 @charset "UTF-8";
-.list-group-item:nth-child(4)::after, .list-group-item:nth-child(6)::after { 
-   	 		content: ""; 
-    		display: block; 
-     		border-bottom: 1px solid #ddd; 
-     		margin: 10px 0;
- 		} 
+
+:root {
+  --primary-color: #000;
+  --background-color: #fff;
+  --border-color: #dee2e6;
+  --hover-color: #f8f9fa;
+}
+
+.my-ticket-header-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.my-ticket-header {
+    background-color: var(--background-color);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+}
+
+.my-ticket-header .nav-pills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    min-width: 600px;
+}
+
+.my-ticket-header .nav-link {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    border: none;
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.my-ticket-header .nav-item {
+    flex: 1;
+    display: flex;
+}
+
+.my-ticket-header .nav-item.myticket-title {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.my-ticket-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.user-name, .my-point, .usable-ticket-count {
+    font-weight: bold;
+}
+
+.my-ticket-header .nav-link:hover {
+    background-color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    .my-ticket-header .nav-pills {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .my-ticket-header .nav-item {
+        flex: 0 0 auto;
+    }
+
+    .my-ticket-title {
+        font-size: 1.2rem;
+    }
+}
