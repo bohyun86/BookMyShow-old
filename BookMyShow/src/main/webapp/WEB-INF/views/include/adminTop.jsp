@@ -17,19 +17,35 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto navbar-right-top">
                 <li class="nav-item dropdown nav-user">
-                    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false"><img src="${pageContext.request.contextPath}/resources/admin_partner/assets/images/avatar-1.jpg" alt=""
-                                                                       class="user-avatar-md rounded-circle"></a>
-                    <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
-                         aria-labelledby="navbarDropdownMenuLink2">
-                        <div class="nav-user-info">
-                            <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
-                            <span class="status"></span><span class="ml-2">Available</span>
-                        </div>
-                        <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
-                    </div>
+<!--                     <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" -->
+<%--                        aria-haspopup="true" aria-expanded="false"><img src="${pageContext.request.contextPath}/resources/admin_partner/assets/images/avatar-1.jpg" alt="" --%>
+<!--                          class="user-avatar-md rounded-circle"></a> -->
+                                                                
+                                                                
+                                                                
+                  <div class="header_cont">
+				<ul class="util clear">
+				
+				<c:if test="${empty sessionScope.id }">
+					<li><a href="${pageContext.request.contextPath}/login/">로그인</a></li>
+					
+				</c:if>
+				<c:if test="${! empty sessionScope.id }">
+					<li><a>${sessionScope.id}님</</a></li>
+					<li><a href="${pageContext.request.contextPath}/logout/">로그아웃</a></li>
+				</c:if>
+					
+				</ul>	
+<!--                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" -->
+<!--                          aria-labelledby="navbarDropdownMenuLink2"> -->
+<!--                         <div class="nav-user-info"> -->
+<!--                             <h5 class="mb-0 text-white nav-user-name">John Abraham </h5> -->
+<!--                             <span class="status"></span><span class="ml-2">Available</span> -->
+<!--                         </div> -->
+<!--                         <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a> -->
+<!--                         <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a> -->
+<!--                         <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a> -->
+<!--                     </div> -->
                 </li>
             </ul>
         </div>
