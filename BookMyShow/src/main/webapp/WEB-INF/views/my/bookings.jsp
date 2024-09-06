@@ -13,7 +13,32 @@
             <div class="title">
                 예매내역
             </div>
-            
+<!--             <div class="card w-100"> -->
+<!--   <div class="card-header"> -->
+<!--     <div class="d-flex justify-content-between align-items-center"> -->
+<!--       <span>상태</span> -->
+<!--       <span>날짜</span> -->
+<!--     </div> -->
+<!--     <h5 class="card-title mt-2">뮤지컬 제목</h5> -->
+<!--     <p class="card-text">공연 날짜: 2023년 9월 15일</p> -->
+<!--   </div> -->
+<!--   <div class="card-body d-flex"> -->
+<!--     <img src="musical_poster.jpg" class="img-fluid me-3" style="width: 150px; height: auto;" alt="뮤지컬 포스터"> -->
+<!--     <div class="d-flex flex-column justify-content-between"> -->
+<!--       <div> -->
+<!--         <p class="card-text">공연장: 세종문화회관</p> -->
+<!--         <p class="card-text">좌석: A열 15번</p> -->
+<!--       </div> -->
+<!--       <div class="d-flex justify-content-between align-items-center"> -->
+<!--         <p class="card-text fw-bold">가격: 80,000원</p> -->
+<!--         <div> -->
+<!--           <button class="btn btn-outline-primary btn-sm me-2">상세정보</button> -->
+<!--           <button class="btn btn-primary btn-sm">예매하기</button> -->
+<!--         </div> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </div> -->
         </section>
     </main>
 

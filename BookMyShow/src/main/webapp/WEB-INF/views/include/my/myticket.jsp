@@ -10,19 +10,19 @@
             <li class="nav-item">
                 <div class="nav-link d-flex flex-column align-items-center">
                     <span>안녕하세요</span>
-                    <a href="#" class="user-name">님</a>
+                    <a href="#" class="user-name">$님</a>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="nav-link d-flex flex-column align-items-center">
                     <span>나의 포인트</span>
-                    <a href="#" class="my-point">0</a>
+                    <a href="#" class="my-point">$</a>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="nav-link d-flex flex-column align-items-center">
                     <span>이용가능 티켓</span>
-                    <a href="#" class="usable-ticket-count">0</a>
+                    <a href="#" class="usable-ticket-count">$</a>
                 </div>
             </li>
         </ul>
