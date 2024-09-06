@@ -10,7 +10,7 @@
 		<jsp:include page="../include/my/sidebar.jsp" />
 		
 		<section class="h-100" id="board-content">
-			<div class="title">내용</div>
+			<div class="title">예매완료</div>
 		</section>
 	</main>
 
