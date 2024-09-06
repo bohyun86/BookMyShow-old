@@ -8,6 +8,8 @@
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
+	<bean id="mysqlCleanup" class="com.itwillbs.common.MySQLCleanup" destroy-method="cleanup"/>
+
 	<!-- HikariCP 데이터 소스 설정 -->
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
@@ -21,6 +23,10 @@
 		<property name="idleTimeout" value="30000" />
 		<property name="connectionTimeout" value="20000" />
 	</bean>
+
+
+
+
 
 	<!-- MyBatis 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

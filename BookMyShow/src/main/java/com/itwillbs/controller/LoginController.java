@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/login")
 public class LoginController {
 
-    @GetMapping("/")
+    @GetMapping("")
     public String login() {
         log.info("login success");
 
         return "/login/login";
+    }
+
+    @GetMapping("/logout")
+    public void logout() {
+        log.info("logout success");
     }
 }

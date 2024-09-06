@@ -14,6 +14,12 @@
             <li class="nav-item" >
                 <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/">로그인</a>
             </li>
+<%--          <li class="nav-item">
+           <form action="${pageContext.request.contextPath}/logout" method="post">
+              <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+              <input type="submit" class="nav-link text-black" value="로그아웃">
+          </form>
+           </li>--%>
             <li class="nav-item">
                 <a class="nav-link text-black" href="#">회원가입</a>
             </li>

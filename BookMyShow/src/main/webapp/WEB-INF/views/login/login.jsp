@@ -18,7 +18,7 @@
 </head>
 <body class="bg-opacity-50">
 <div class="w-100 min-vh-100 d-flex justify-content-center align-items-center bg-white" >
-    <form class="p-5 shadow" id="login-form">
+    <form class="p-5 shadow" id="login-form" method="post">
         <h2 class="pb-3 text-center mt-5 mb-3"><a href="${pageContext.request.contextPath}/main">예매하다</a></h2>
         <div class="form-group pb-2 d-flex row align-items-stretch">
             <div class="input-group my-2 px-0" id="id-input" >
@@ -63,6 +63,7 @@
         <div class="text-center mt-5" id="login-problem">
             <a href="#" class="fs-6 fw-bolder">※ 회원가입/로그인에 문제가 있어요!></a>
         </div>
+        <input type='hidden' name="${_csrf.parameterName}" value="${_csrf.token}"/>
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

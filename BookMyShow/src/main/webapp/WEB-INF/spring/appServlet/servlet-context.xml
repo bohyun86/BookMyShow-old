@@ -25,6 +25,7 @@
     <!--	servlet-context에서는 @Controller, @RequestMapping, @RestController와 같은 웹 관련 빈 스캔-->
 
     <context:component-scan base-package="com.itwillbs.controller"/>
-
+    <context:component-scan base-package="com.itwillbs.common"/>
+    <context:component-scan base-package="com.itwillbs.security"/>
 
 </beans:beans>
