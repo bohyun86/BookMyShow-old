@@ -9,7 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Log4j2
-@EnableAspectJAutoProxy(proxyTargetClass = true)
+@RequestMapping("/main/*")
 public class MainController {
 
+    @RequestMapping("")
+    public String home() {
+        log.info("main success");
+
+        return "/main/main";
+    }
 }

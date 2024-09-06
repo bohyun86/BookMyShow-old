@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>로그인-예매하다</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="${pageContext.request.contextPath}/resources/css/login.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body class="bg-opacity-50">
 <div class="w-100 min-vh-100 d-flex justify-content-center align-items-center bg-white" >
     <form class="p-5 shadow" id="login-form" method="post">
-        <h2 class="pb-3 text-center mt-5 mb-3"><a href="${pageContext.request.contextPath}/main">예매하다</a></h2>
+        <h2 class="pb-3 text-center mt-5 mb-3"><a href="${pageContext.request.contextPath}/main/">예매하다</a></h2>
         <div class="form-group pb-2 d-flex row align-items-stretch">
             <div class="input-group my-2 px-0" id="id-input" >
                 <div class="input-group-prepend">
@@ -42,7 +42,7 @@
         <div id="login-submenu" class="d-flex justify-content-center">
             <a href="#" class="text-decoration-none">아이디 찾기</a>
             <a href="#" class="text-decoration-none">비밀번호 찾기</a>
-            <a href="#" class="text-decoration-none">회원가입</a>
+            <a href="${pageContext.request.contextPath}/login/join" class="text-decoration-none">회원가입</a>
         </div>
 
 

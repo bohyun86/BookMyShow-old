@@ -19,6 +19,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/index.css">
 
+    <style>
+        .site-logo {
+            text-decoration: none;
+            color: #ff4b4b;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="../include/top.jsp"/>
