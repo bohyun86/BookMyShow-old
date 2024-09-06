@@ -85,14 +85,40 @@
 			
 <%-- 			</c:if>		 --%>
 <%-- 		</c:if> --%>
-				
-				
-				
-				
-				
-				
-				
 
+
+
+				
+			<form action="#">	
+				<div class="card mb-3" style="max-width: 540px;">
+  
+					<div class="card mb-3" style="max-width: 540px;">
+  						<div class="row g-0">
+   							 <div class="col-md-4">
+     							 <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg"" class="img-fluid rounded-start" alt="...">
+   							 </div>
+    						<div class="col-md-8">
+      							<div class="card-body">
+        							<h4 class="card-title">승인 요청중인 뮤지컬</h4>
+       									 <p class="card-text">
+       									 	
+       									 	
+<!--        									textarea / 파트너가 요청한 뮤지컬 정보가 나왕함 여기선 텍스트 입력 불가 -->
+       										 
+       										 
+
+       													 </p>
+				 										
+				 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  															<button class="btn btn-primary me-md-2"  type="submit" >등록승인</button> &nbsp; &nbsp;
+  																<button class="btn btn-primary" onclick = "location.href='${pageContext.request.contextPath}/admin/editPro'"type="button"  >수정</button>
+														</div>
+    												</div>
+  												</div>
+											</div>
+  										</div>
+  									</div>	
+									</form>
 
 
 					<div class="ecommerce-widget"> 

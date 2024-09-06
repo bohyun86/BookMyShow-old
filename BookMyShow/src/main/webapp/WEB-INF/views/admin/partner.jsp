@@ -71,7 +71,7 @@
 
 	<select name="findType" class="form-control mr-2">
 		<option value="">::검색 유형::</option>
-		<option value="1">회원이름</option>
+		<option value="1">이름</option>
 		<option value="2">아이디</option>
 	</select>
 	<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" 
@@ -79,7 +79,22 @@
 	<button class="btn btn-success">검 색</button>
 </form>
 				
+				
+				<ul class="list-group">
+  <li class="list-group-item">검색된 파트너 정보 띄우기</li>
+  </ul>
 
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" onclick = "location.href='${pageContext.request.contextPath}/admin/partnerPro'" type="button">정보 조회 및 수정</button>
+</div></p> 
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button">정산내역</button>
+</div></p>
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/partner_qna'">1:1문의</button>
+</div></p>
 
 
 					<div class="ecommerce-widget"> 

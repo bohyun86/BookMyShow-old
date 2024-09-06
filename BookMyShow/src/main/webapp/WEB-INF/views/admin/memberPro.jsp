@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">뮤지컬수정페이지 </h2>
+                            <h2 class="pageheader-title">회원관리페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
@@ -68,7 +68,7 @@
 
 
 			
-				<h3>${sessionScope.id }파트너님이 승인 요청중인 뮤지컬입니다.</h3>
+				<h3>${sessionScope.id }회원님의 정보입니다.</h3>
 
 			
 	
@@ -80,101 +80,68 @@
   
 					<div class="card mb-3" style="max-width: 540px;">
   						<div class="row g-0">
-   							 <div class="col-md-4">
-     							 <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg" class="img-fluid rounded-start" alt="new1">
-   							 </div>
     						<div class="col-md-8">
       							<div class="card-body">
-        							<h4 class="card-title">뮤지컬 수정</h4>
+        							<h4 class="card-title">회원 정보</h4>
        									 <p class="card-text">
        									 	
-       									 	<form class="was-validated" action="${pageContext.request.contextPath}/admin/edit">
+       									 	<form class="was-validated" action="${pageContext.request.contextPath}/admin/member">
        									 	<div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">뮤지컬 제목</span>
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">회원ID</span>
   													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
     													<div class="invalid-feedback">
-     														 뮤지컬 제목을 입력해주세요.
+     														 회원ID를 입력해주세요.
    														 </div>
 													</div>
 													
 												<div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">공연기간</span>
-  													<input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  id="startDate" name="daterange" required>
-  													<input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  id="endDate" name="daterange" required>
-    													
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">이름</span>
+  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"  id="startDate" name="daterange" required>
     													
     													<div class="invalid-feedback">
-     														 공연 기간을 입력해주세요.
+     														 이름을 입력해주세요.
    														 </div>
 													</div> 
 <!-- 													공연기간 종료날짜가 시작날짜보다 전 날짜로 선택 못하게 설정해야함 -->
 													
 													<div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">공연장소</span>
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">연락처</span>
   													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
     													<div class="invalid-feedback">
-     														 공연장소를 입력해주세요.
+     														 연락처를 입력해주세요.
    														 </div>
 													</div>
 													
 													<div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">관람연령</span>
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">이메일</span>
   													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
     													<div class="invalid-feedback">
-     														  관람연령을 입력해주세요.
+     														  이메일을 입력해주세요.
    														 </div>
 													</div>
 	 													 
 	 													 <div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">티켓가격</span>
-  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    													<div class="invalid-feedback">
-     														  티켓가격을 입력해주세요.
-   														 </div>
-													</div>
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">성별</span>
+  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readonly>
+    													</div>
 	 													 
 	 													  <div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">출연진</span>
-  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    													<div class="invalid-feedback">
-     														  출연진을 입력해주세요.
-   														 </div>
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">예매한 뮤지컬 내역</span>
+  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readonly>
+    													</div>
+													
+													 <div class="input-group input-group-sm mb-3">
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">리뷰작성 뮤지컬</span>
+  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readonly>
+    													
 													</div>
 													
 													 <div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">제작진</span>
-  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    													<div class="invalid-feedback">
-     														  제작진을 입력해주세요.
-   														 </div>
+ 	 											<span class="input-group-text" id="inputGroup-sizing-sm">가입날짜</span>
+  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" readonly>
+    													
 													</div>
 													
-													 <div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">주최.주관</span>
-  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    													<div class="invalid-feedback">
-     														  주최.주관을 입력해주세요.
-   														 </div>
-													</div>
-													
-													<div class="input-group input-group-sm mb-3">
- 	 											<span class="input-group-text" id="inputGroup-sizing-sm">기획.제작</span>
-  													<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
-    													<div class="invalid-feedback">
-     														  기획.제작을 입력해주세요.
-   														 </div>
-													</div>
-<!-- 	 																					
-	 								 													 
-	 													
-<!-- 	 													 		 <div class="col-md-6"> -->
-<!--     											<label for="validationCustom11" class="form-label">소개</label> -->
-<!--     												<textarea class="form-control" id="validationCustom11" required> -->
-<!--     													<div class="invalid-feedback"> -->
-<!--      														 뮤지컬 제목을 입력해주세요. -->
-<!--    														 </div> -->
-<!-- 	 													 </div>  -->
-<!-- 소개 //사이드바 드롭다운 x 일단 주석  -->
 			
 				 										
 				 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -193,10 +160,6 @@
   </div>
 
 
-<script>
-
-  document.getElementById('startDate').value = new Date().toISOString().substring(0, 10);;
-</script>
 
 
 

@@ -73,7 +73,7 @@
    <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg" class="img-thumbnail" alt="new1" style="width: 100px">
    옥탑방 고양이
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  <a class="btn btn-outline-primary btn-sm" href="${pageContext.request.contextPath}/admin/editPro" role="button">수정</a>
   </div>
   </button>
  
@@ -81,7 +81,7 @@
    <img src="${pageContext.request.contextPath}/resources/images/poster/newopen2.jpg" class="img-thumbnail" alt="new2" style="width: 100px">
    최상급 요트에서 특별한 여행 추억 쌓기!
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="btn btn-outline-primary btn-sm" href="editPro.jsp" role="button">수정</a>
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
   </div>
   </button>
   

@@ -47,6 +47,9 @@ public class AdminController {
     	return "/admin/submit";
     }
     
+  
+    
+    
     @GetMapping("/edit")
     public String edit() {
     	log.info("admin edit success");
@@ -56,8 +59,13 @@ public class AdminController {
     @GetMapping("/editPro")
     public String editPro() {
     	log.info("admin editPro success");
+    	
+    	
     	return "/admin/editPro";
     }
+    
+   
+    
     
     
     @GetMapping("/partner")
@@ -65,14 +73,38 @@ public class AdminController {
     	log.info("admin partner success");
     	return "/admin/partner";
     }
+    //검색을 누르면 밑에 정보가 떠야함 리스트중  선택해야 파트너 수정페이지는 페이지결과 쉽게 보려고 임시로 경로설정
+    //자바스크립트 써야할듯
+    
+    @GetMapping("/partnerPro")
+    public String partnerPro() {
+    	log.info("admin partnerPro success");
+    	return "/admin/partnerPro";
+    }
+    
+    @GetMapping("/partner_qna")
+    public String partner_qna() {
+    	log.info("admin partner_qna success");
+    	return "/admin/partner_qna";
+    }
     
     
     
     @GetMapping("/member")
-    public String member_search() {
-    	log.info("admin member_search success");
+    public String member() {
+    	log.info("admin member success");
     	return "/admin/member";
     }
+    
+ //검색을 누르면 밑에 정보가 뜨고 리스트중 회원을 선택해야 회원 수정페이지는 페이지결과 쉽게 보려고 임시로 경로설정
+  //자바스크립트 써야할듯
+    
+    @GetMapping("/memberPro")
+    public String memberPro() {
+    	log.info("admin memberPro success");
+    	return "/admin/memberPro";
+    }
+    
     
     
     

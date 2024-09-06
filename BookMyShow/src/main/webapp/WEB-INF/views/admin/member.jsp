@@ -69,7 +69,7 @@
 			
 				
 <%-- <h1 class="text-center m-3">[검색어:<%=findKeyword %> ] 검색 결과</h1>				 --%>
-<form name="findF" action="#" class="form-inline">
+<form name="findF" action="${pageContext.request.contextPath}/admin/memberPro" class="form-inline">
 
 	<select name="findType" class="form-control mr-2">
 		<option value="">::검색 유형::</option>
@@ -81,6 +81,22 @@
 	class="form-control mr-2">
 	<button class="btn btn-success">검 색</button>
 </form>
+
+<ul class="list-group">
+  <li class="list-group-item">검색된 회원 정보 띄우기</li>
+  </ul>
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button">정보 조회 및 수정</button>
+</div></p> 
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button">예매내역</button>
+</div></p>
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button">결제내역</button>
+</div></p>
 
 
 					<div class="ecommerce-widget"> 

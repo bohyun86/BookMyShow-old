@@ -55,7 +55,7 @@
 									
                                 
                                 
-                                <form name="findF" action="#" class="form-inline">
+                                <form name="findF" action="${pageContext.request.contextPath}/admin/submit" class="form-inline">
 									<select name="findType" class="form-control mr-2">
 										<option value="">::검색 유형::</option>
 										<option value="1">파트너ID</option>
