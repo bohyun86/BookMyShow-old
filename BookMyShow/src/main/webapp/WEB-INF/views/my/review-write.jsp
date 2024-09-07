@@ -4,12 +4,16 @@
 <html lang="ko">
 <head>
 <%@ include file="../include/my/header.jsp"%>
-<%-- <link rel="stylesheet" href="<c:url value='/resources/css/my/.css'/>"> --%>
+<%-- <link rel="stylesheet" href="<c:url value='/resources/css/my/@@@.css'/>"> --%>
 </head>
 <body id="board-body">
+    
+    <!--     review가 있으면 edit으로 이동  -->
+    
     <jsp:include page="../include/top.jsp"/>
     <jsp:include page="../include/my/myticket.jsp"/>
     
+
     <main class="row d-flex justify-content-between align-items-center" id="board-main">
         <jsp:include page="../include/my/sidebar.jsp"/>
         <section class="h-100" id="board-content">

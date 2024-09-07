@@ -10,13 +10,13 @@
             <li class="nav-item">
                 <div class="nav-link d-flex flex-column align-items-center">
                     <span>안녕하세요</span>
-                    <a href="#" class="user-name">$님</a>
+                    <a href="#" class="user-name">${user.name}님</a>
                 </div>
             </li>
             <li class="nav-item">
                 <div class="nav-link d-flex flex-column align-items-center">
                     <span>나의 포인트</span>
-                    <a href="#" class="my-point">$</a>
+                    <a href="#" class="my-point">${user.points}P</a>
                 </div>
             </li>
             <li class="nav-item">
