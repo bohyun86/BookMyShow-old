@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itwillbs.mapper.UserMapper">
+
+
+    <insert id="insertUser">
+        insert into User(user_id, password, email, phone_number, name, user_role, updated_at)
+        values(#{userId},#{password},#{email},#{phoneNumber},#{name},#{userRole}, now())
+    </insert>
+
+    <insert id="insertMember">
+        insert into Member(member_id, user_id)
+        values(#{memberId},#{userId})
+    </insert>
+</mapper>
+  

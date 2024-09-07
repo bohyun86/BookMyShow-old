@@ -3,8 +3,10 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:context="http://www.springframework.org/schema/context"
 	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	   xmlns:tx="http://www.springframework.org/schema/c"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
@@ -13,8 +15,8 @@
 	<!-- HikariCP 데이터 소스 설정 -->
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/jspdb?serverTimezone=Asia/Seoul" />
-		<property name="username" value="root" />
+		<property name="jdbcUrl" value="jdbc:mysql://itwillbs.com:3306/c1d2405t1?serverTimezone=Asia/Seoul" />
+		<property name="username" value="c1d2405t1" />
 		<property name="password" value="1234" />
 
 		<!-- 추가 HikariCP 설정 (선택 사항) -->
@@ -23,9 +25,6 @@
 		<property name="idleTimeout" value="30000" />
 		<property name="connectionTimeout" value="20000" />
 	</bean>
-
-
-
 
 
 	<!-- MyBatis 설정 -->
@@ -38,14 +37,26 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<mybatis-spring:scan base-package="com.itwillbs.mapper" />
+
 	<!-- root-context에서는 @Service, @Repository, @Configuration, @Component 같은 빈을 스캔-->
 
 	<context:component-scan base-package="com.itwillbs.aop" />
+	<context:component-scan base-package="com.itwillbs.dao" />
+	<context:component-scan base-package="com.itwillbs.service" />
+	<context:component-scan base-package="com.itwillbs.domain" />
+	<context:component-scan base-package="com.itwillbs.mapper" />
 
 	<aop:aspectj-autoproxy />
 
 	<!-- 테스트용 빈 스캔 설정-->
 	<context:component-scan base-package="com.itwillbs.controller"/>
+
+
 
 
 </beans>
