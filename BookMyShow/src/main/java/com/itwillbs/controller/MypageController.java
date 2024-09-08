@@ -28,10 +28,10 @@ public class MypageController {
         return "/my/booking-complete";
     }
 
-    @GetMapping("/refund-cancel")
-    public String refundCancel() {
-        log.info("refund cancel");
-        return "/my/refund-cancel";
+    @GetMapping("/refund")
+    public String refund() {
+        log.info("refund");
+        return "/my/refund";
     }
 
     @GetMapping("/refund-complete")

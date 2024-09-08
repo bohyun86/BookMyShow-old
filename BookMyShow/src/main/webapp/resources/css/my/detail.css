@@ -1,30 +1,63 @@
 @charset "UTF-8";
 
-.booking-detail-card, .refund-detail-card {
+/* 카드 스타일 */
+.detail-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
     margin-bottom: 20px;
+    
 }
 
+/* 행 스타일 */
 .detail-row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 
+.detail-row:not(.divider) {
+    border-bottom: none;
+}
+
+/* 구분선 */
+.divider {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+/* 레이블과 값 스타일 */
 .detail-label {
     font-weight: bold;
     color: #555;
+    flex: 0 0 100px;
+    margin-right: 20px;
 }
 
 .detail-value {
-    color: #333;
+    flex: 1;
 }
 
+/* 상태 스타일 */
+.status {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* 뮤지컬 제목 링크 스타일 */
+.musical-title-link:hover {
+    color: #dc3545;
+}
+
+/* 버튼 스타일 */
+.action-button {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* 환불 정보 스타일 */
 .refund-info {
     background-color: #f8f9fa;
     border-radius: 5px;
@@ -36,4 +69,60 @@
     margin-bottom: 5px;
     font-size: 0.9em;
     color: #666;
+}
+
+/* main-content 높이 조정 */
+#board-content {
+    min-height: calc(100vh - 200px); /* 예상 헤더/푸터 높이를 뺀 값 */
+}
+
+.refund-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.booking-info {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.poster {
+    flex: 0 0 200px;
+    margin-right: 30px;
+}
+
+.poster img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h2 {
+    margin-bottom: 15px;
+}
+
+.refund-details h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.refund-notice {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.refund-notice ul {
+    padding-left: 20px;
+}
+
+#refundButton {
+    width: 100%;
 }
