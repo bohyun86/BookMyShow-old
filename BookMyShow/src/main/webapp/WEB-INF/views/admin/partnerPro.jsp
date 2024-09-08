@@ -60,6 +60,7 @@
                         </div>
                     </div>
                 </div>
+              
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
@@ -167,6 +168,7 @@
 <!-- 소개 //사이드바 드롭다운 x 일단 주석  -->
 			
 				 										
+				 										
 				 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
   															<button class="btn btn-primary me-md-2" type="submit" >수정완료</button> &nbsp; &nbsp;
   																<button class="btn btn-primary" type="button" href="#">삭제</button>
@@ -175,19 +177,24 @@
     												</div>
   												</div>
 											</div>
-  										</div>
-  										</div>
   										
-									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="reset" href="" >취소</button>
-  </div>
+ 									  </div>
+ 									 </div>
+ 									 
+ 									 
+									<div class="d-grid gap-2 col-6 mx-auto">
+  										<button class="btn btn-primary me-md-2" type="reset" onclick = "location.href='${pageContext.request.contextPath}/admin/partner'" >취소</button>
+ 									 </div>
+ 									 
+ 									 </div>
+ 									 </div>
+
+ </div>
+                </div>
 
 
 
-
-
-
-					<div class="ecommerce-widget"> 
+<!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
 <!--                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"> -->

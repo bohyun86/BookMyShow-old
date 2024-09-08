@@ -60,6 +60,8 @@
                         </div>
                     </div>
                 </div>
+             
+                
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
@@ -71,45 +73,41 @@
 			
 				${sessionScope.id }파트너님의 문의<br>
 
+<form action="#"></form>
 <div class="card w-75 mb-3">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 class="card-title">1.문의유형 / 문의 작성일<input type="date" name="createddate1"></h5>
+    <p class="card-text">문의내용 :</p>
    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="reset" href="" >답변등록</button>
+  <input type="text" name="answer">&nbsp;
+  <button class="btn btn-primary me-md-2" type="submit" href="" >답변등록</button>
   </div>
   </div>
 </div>
+</div>
 
+<form action="#">
 <div class="card w-75 mb-3">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 class="card-title">2.문의유형 / 문의 작성일<input type="date" name="createddate2"></h5>
+    <p class="card-text">문의내용 : </p>
      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="reset" href="" >답변등록</button>
+     <input type="text" name="answer" placeholder="기존답변 ---">&nbsp;
+  <button class="btn btn-primary me-md-2" type="sumit" href="#" >수정완료</button> &nbsp;&nbsp;
+  <button class="btn btn-primary me-md-2" type="button" href="#" >삭제</button>
   </div>
 </div>
+</div>
+</form>
 
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary me-md-2" type="reset" onclick = "location.href='${pageContext.request.contextPath}/admin/partner'" >돌아가기</button>&nbsp;&nbsp;
+</div>
 
+   </div>
+                </div>
 
-					<div class="ecommerce-widget"> 
+<!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
 <!--                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"> -->

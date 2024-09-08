@@ -54,12 +54,14 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">회원관리페이지 </h2>
+                            <h2 class="pageheader-title" >회원예매내역페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                        </div>
-                    </div>
-                </div>
+                  </div>
+                  </div>
+                  </div>
+            
+                
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
@@ -155,16 +157,18 @@
   										</div>
   										</div>
   										
-									<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary me-md-2" type="reset" href="" >취소</button>
+									<div class="d-grid gap-2 col-6 mx-auto">
+  										<button class="btn btn-primary me-md-2" type="reset" onclick = "location.href='${pageContext.request.contextPath}/admin/member'" >취소</button>
+ 									 </div>
+
   </div>
+              </div>
 
 
 
 
 
-
-					<div class="ecommerce-widget"> 
+<!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
 <!--                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"> -->

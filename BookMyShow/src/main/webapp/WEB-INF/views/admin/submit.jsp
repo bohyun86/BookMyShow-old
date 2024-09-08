@@ -48,6 +48,7 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content ">
+            
                 <!-- ============================================================== -->
                 <!-- pageheader  -->
                 <!-- ============================================================== -->
@@ -60,6 +61,8 @@
                         </div>
                     </div>
                 </div>
+                 
+                
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
@@ -89,7 +92,7 @@
 
 
 				
-			<form action="#">	
+			<form action="${pageContext.request.contextPath}/admin/search">	
 				<div class="card mb-3" style="max-width: 540px;">
   
 					<div class="card mb-3" style="max-width: 540px;">
@@ -110,7 +113,7 @@
        													 </p>
 				 										
 				 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  															<button class="btn btn-primary me-md-2"  type="submit" >등록승인</button> &nbsp; &nbsp;
+  															<button class="btn btn-primary me-md-2"  type="submit"  >등록승인</button> &nbsp; &nbsp;
   																<button class="btn btn-primary" onclick = "location.href='${pageContext.request.contextPath}/admin/editPro'"type="button"  >수정</button>
 														</div>
     												</div>
@@ -119,9 +122,12 @@
   										</div>
   									</div>	
 									</form>
+									</div>
+                </div>
+                </div>
 
 
-					<div class="ecommerce-widget"> 
+<!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
 <!--                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"> -->

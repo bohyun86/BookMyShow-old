@@ -58,7 +58,7 @@
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
-                    </div>
+                   </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
@@ -104,6 +104,9 @@
 
 </div>
 
+
+
+
 <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
@@ -121,7 +124,10 @@
     </li>
   </ul>
 </nav>
-					<div class="ecommerce-widget"> 
+
+</div>
+</div>
+<!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
 <!--                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"> -->

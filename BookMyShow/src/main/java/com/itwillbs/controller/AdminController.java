@@ -48,6 +48,7 @@ public class AdminController {
     }
     
   
+   
     
     
     @GetMapping("/edit")
@@ -73,8 +74,8 @@ public class AdminController {
     	log.info("admin partner success");
     	return "/admin/partner";
     }
-    //검색을 누르면 밑에 정보가 떠야함 리스트중  선택해야 파트너 수정페이지는 페이지결과 쉽게 보려고 임시로 경로설정
-    //자바스크립트 써야할듯
+    //寃��깋�쓣 �늻瑜대㈃ 諛묒뿉 �젙蹂닿� �뼚�빞�븿 由ъ뒪�듃以�  �꽑�깮�빐�빞 �뙆�듃�꼫 �닔�젙�럹�씠吏��뒗 �럹�씠吏�寃곌낵 �돺寃� 蹂대젮怨� �엫�떆濡� 寃쎈줈�꽕�젙
+    //�옄諛붿뒪�겕由쏀듃 �뜥�빞�븷�벏
     
     @GetMapping("/partnerPro")
     public String partnerPro() {
@@ -88,6 +89,12 @@ public class AdminController {
     	return "/admin/partner_qna";
     }
     
+    @GetMapping("/partner_settlement")
+    public String partner_settlement() {
+    	log.info("admin partner_settlement success");
+    	return "/admin/partner_settlement";
+    }
+    
     
     
     @GetMapping("/member")
@@ -96,8 +103,8 @@ public class AdminController {
     	return "/admin/member";
     }
     
- //검색을 누르면 밑에 정보가 뜨고 리스트중 회원을 선택해야 회원 수정페이지는 페이지결과 쉽게 보려고 임시로 경로설정
-  //자바스크립트 써야할듯
+ //寃��깋�쓣 �늻瑜대㈃ 諛묒뿉 �젙蹂닿� �쑉怨� 由ъ뒪�듃以� �쉶�썝�쓣 �꽑�깮�빐�빞 �쉶�썝 �닔�젙�럹�씠吏��뒗 �럹�씠吏�寃곌낵 �돺寃� 蹂대젮怨� �엫�떆濡� 寃쎈줈�꽕�젙
+  //�옄諛붿뒪�겕由쏀듃 �뜥�빞�븷�벏
     
     @GetMapping("/memberPro")
     public String memberPro() {
@@ -105,8 +112,17 @@ public class AdminController {
     	return "/admin/memberPro";
     }
     
+    @GetMapping("/booking")
+    public String booking() {
+    	log.info("admin booking success");
+    	return "/admin/booking";
+    }
     
-    
+    @GetMapping("/payment")
+    public String payment() {
+    	log.info("admin payment success");
+    	return "/admin/payment";
+    }
     
     
     

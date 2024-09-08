@@ -81,23 +81,25 @@
 				
 				
 				<ul class="list-group">
-  <li class="list-group-item">검색된 파트너 정보 띄우기</li>
-  </ul>
+					  <li class="list-group-item">검색된 파트너 정보 띄우기</li>
+					  </ul>
+					
+					<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					  <button class="btn btn-primary" onclick = "location.href='${pageContext.request.contextPath}/admin/partnerPro'" type="button">정보 조회 및 수정</button>
+					</div></p> 
+					
+					<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/partner_settlement'">정산내역</button>
+					</div></p>
+					
+					<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/partner_qna'">1:1문의</button>
+					</div></p>
 
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" onclick = "location.href='${pageContext.request.contextPath}/admin/partnerPro'" type="button">정보 조회 및 수정</button>
-</div></p> 
+  </div>
+                </div>
 
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button">정산내역</button>
-</div></p>
-
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/partner_qna'">1:1문의</button>
-</div></p>
-
-
-					<div class="ecommerce-widget"> 
+<!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
 <!--                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12"> -->

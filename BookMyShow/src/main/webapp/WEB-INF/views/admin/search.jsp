@@ -43,6 +43,8 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content ">
+            </div>
+									
                 <!-- ============================================================== -->
                 <!-- pageheader  -->
                 <!-- ============================================================== -->
@@ -52,8 +54,11 @@
                             <h2 class="pageheader-title">뮤지컬 검색 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-									
-                                
+						</div>			
+                   </div>
+                </div>
+                         
+                         </div>       
                                 
                                 <form name="findF" action="${pageContext.request.contextPath}/admin/submit" class="form-inline">
 									<select name="findType" class="form-control mr-2">
@@ -63,13 +68,11 @@
 								</select>
 									<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" 
 									class="form-control mr-2">
-									<button class="btn btn-success" >검 색</a></button>
+									<button class="btn btn-success" >검 색</button>
 								</form>
                 
-                        </div>
-                    </div>
                 </div>
-                
+                </div>
 
 
 

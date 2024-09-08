@@ -32,7 +32,7 @@
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>예매하다. 관리자 페이지</title>
+    <title >예매하다. 관리자 페이지</title>
 </head>
 
 <body>
@@ -54,50 +54,126 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">회원검색페이지 </h2>
+                            <h2 class="pageheader-title" >파트너 정산페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
                     </div>
                 </div>
+            
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
                  
 <!-- ==================================================== -->
 
-			
+
+
+				${sessionScope.id }파트너님의 정산내역입니다.<br>
 				
-<%-- <h1 class="text-center m-3">[검색어:<%=findKeyword %> ] 검색 결과</h1>				 --%>
-<form name="findF" action="#" class="form-inline">
+				<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+  					<div class="card-header">정산내역</div>
+  						<div class="card-body">
+    						<p class="card-text">
+    
+    							<table class="table">
+									  <thead>
+									    <tr>
+									      <th scope="col">#</th>
+									      <th scope="col">결제수단</th>
+									      <th scope="col">건수</th>
+									      <th scope="col">금액</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <th scope="row">1</th>
+									      <td>현금</td>
+									      <td>~건</td>
+									      <td>~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">2</th>
+									      <td>카드</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">3</th>
+									      <td>합계</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									  </tbody>
+									</table>
+									</p>
+									  </div>
+									</div>
 
-	<select name="findType" class="form-control mr-2">
-		<option value="">::검색 유형::</option>
-		<option value="1">이름</option>
-		<option value="2">아이디</option>
-		<option value="3">이메일</option>
-	</select>
-		<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" class="form-control mr-2">
-			<button class="btn btn-success">검 색</button>
-</form>
+									<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+									  <div class="card-header">정산내역</div>
+									  <div class="card-body">
+									    <p class="card-text">
+									    
+									     <table class="table">
+									  <thead>
+									    <tr>
+									      <th scope="col">#</th>
+									      <th scope="col">결제수단</th>
+									      <th scope="col">건수</th>
+									      <th scope="col">금액</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <th scope="row">1</th>
+									      <td>현금</td>
+									      <td>~건</td>
+									      <td>~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">2</th>
+									      <td>카드</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">3</th>
+									      <td>합계</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									  </tbody>
+									</table>
+									    
+									    </p>
+									  </div>
+									</div>
+				
+				 					<table class="table">
+										  <thead>
+										    <tr>
+										      <th >수수료</th>
+										      <th >총매출</th>
+										    </tr>
+										  </thead>
+										  
+										  <tbody>
+										  <tr>
+										      <th >~원</th>
+										      <td>~원</td>
+										    </tr>
+										  </tbody>
+										  
+										  
+										</table>
 
-<ul class="list-group">
-  <li class="list-group-item">검색된 회원 정보 띄우기</li>
-</ul>
 
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/memberPro'">정보 조회 및 수정</button>
-</div></p> 
+											<p><div class="d-grid gap-2 col-6 mx-auto">
+											  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/partner'">돌아가기</button>
+											</div></p>
 
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/booking'">예매내역</button>
-</div></p>
-
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button"  onclick = "location.href='${pageContext.request.contextPath}/admin/payment'">결제내역</button>
-</div></p>
-
-  </div>
+    </div>
                 </div>
 
 <!-- 					<div class="ecommerce-widget">  -->

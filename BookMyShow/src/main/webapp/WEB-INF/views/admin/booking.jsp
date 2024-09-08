@@ -32,7 +32,7 @@
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>예매하다. 관리자 페이지</title>
+    <title >예매하다. 관리자 페이지</title>
 </head>
 
 <body>
@@ -54,52 +54,58 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">회원검색페이지 </h2>
+                            <h2 class="pageheader-title" >회원예매내역페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                        </div>
-                    </div>
-                </div>
+                  </div>
+                  </div>
+                  </div>
+                  
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
                  
 <!-- ==================================================== -->
 
+
+
 			
-				
-<%-- <h1 class="text-center m-3">[검색어:<%=findKeyword %> ] 검색 결과</h1>				 --%>
-<form name="findF" action="#" class="form-inline">
-
-	<select name="findType" class="form-control mr-2">
-		<option value="">::검색 유형::</option>
-		<option value="1">이름</option>
-		<option value="2">아이디</option>
-		<option value="3">이메일</option>
-	</select>
-		<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" class="form-control mr-2">
-			<button class="btn btn-success">검 색</button>
-</form>
-
-<ul class="list-group">
-  <li class="list-group-item">검색된 회원 정보 띄우기</li>
-</ul>
-
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/memberPro'">정보 조회 및 수정</button>
-</div></p> 
-
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/booking'">예매내역</button>
-</div></p>
-
-<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-primary" type="button"  onclick = "location.href='${pageContext.request.contextPath}/admin/payment'">결제내역</button>
-</div></p>
+	
+			<div class="card mb-3" style="max-width: 540px;">
+  
+					<div class="card mb-3" style="max-width: 540px;">
+  						<div class="row g-0">
+    						<div class="col-md-8">
+      							<div class="card-body">
+        							<h4 class="card-title">${sessionScope.id }회원님의 예매내역</h4>
+       									 <p class="card-text">
+       									 <ul>
+       									 	<li>예매번호:</li>
+       									 	<li>예매한 뮤지컬:</li>
+       									 	<li>관람일:</li>
+       									 	<li>공연장소:</li>
+       									 	<li>예매날짜:</li>
+       									 	<li>예매좌석 번호:</li>
+       									 	<li>예매인원 수:</li>
+       									 
+       									 
+       									 </ul>
+       									 
+       									 </p>
+       									 </div>
+       									 </div>
+       									 </div>
+       									 </div>
+       									 </div>
+       									 				
+										<div class="d-grid gap-2 col-6 mx-auto">
+  											<button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/member'">돌아가기</button> &nbsp;&nbsp; 
+										</div>
 
   </div>
-                </div>
-
+                  </div>
+                  
+     			
 <!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
