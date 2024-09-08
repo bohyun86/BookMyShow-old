@@ -1,8 +1,12 @@
 package com.itwillbs.domain;
 
 import lombok.Data;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import javax.persistence.Column;
+import java.util.Collection;
+import java.util.List;
 
 @Data
 public class UserDTO {
@@ -33,6 +37,11 @@ public class UserDTO {
 
     @Column(name = "updated_at")
     private String updatedAt;
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(userRole));
+    }
+
 }
 
 

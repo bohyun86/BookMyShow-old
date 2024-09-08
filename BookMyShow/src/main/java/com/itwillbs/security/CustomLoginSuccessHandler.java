@@ -20,24 +20,21 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
             throws IOException, ServletException {
         log.warn("Login Success");
 
-        List<String> roleNames = new ArrayList<>();
+        // Authentication 객체에서 사용자 정보를 가져옴
+        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
 
-        authentication.getAuthorities().forEach(authority -> {
-            roleNames.add(authority.getAuthority());
-        });
+        // 세션에 유저 정보 저장
+        request.getSession().setAttribute("user", userDetails.getUserDTO());
 
-        log.warn("ROLE NAMES: {}", roleNames);
-
-        if (roleNames.contains("ROLE_ADMIN")) {
-            response.sendRedirect(request.getContextPath() + "/sample/admin");
-            return;
+        // ROLE에 따라 리다이렉트 경로 설정
+        if (userDetails.getAuthorities().stream().anyMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN"))) {
+            response.sendRedirect("/main");
+        } else {
+            response.sendRedirect("/main");
         }
 
-        if (roleNames.contains("ROLE_MEMBER")) {
-            response.sendRedirect(request.getContextPath() + "/sample/member");
-            return;
-        }
-
-        response.sendRedirect("/");
+        response.sendRedirect("/main");
     }
+
+
 }
