@@ -4,9 +4,12 @@
 	   xmlns:context="http://www.springframework.org/schema/context"
 	   xmlns:aop="http://www.springframework.org/schema/aop"
 	   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
-	   xmlns:tx="http://www.springframework.org/schema/c"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
+		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
@@ -20,12 +23,19 @@
 		<property name="password" value="1234" />
 
 		<!-- 추가 HikariCP 설정 (선택 사항) -->
-		<property name="maximumPoolSize" value="10" />
-		<property name="minimumIdle" value="5" />
-		<property name="idleTimeout" value="30000" />
-		<property name="connectionTimeout" value="20000" />
+		<!--		<property name="maximumPoolSize" value="10" />-->
+		<!--		<property name="minimumIdle" value="5" />-->
+		<!--		<property name="idleTimeout" value="30000" />-->
+		<!--		<property name="connectionTimeout" value="20000" />-->
 	</bean>
 
+	<!-- 트랜잭션 관리자 설정 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<!-- 트랜잭션 어노테이션 활성화 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
 
 	<!-- MyBatis 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -37,13 +47,13 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+
+
+
 
 	<mybatis-spring:scan base-package="com.itwillbs.mapper" />
 
-	<!-- root-context에서는 @Service, @Repository, @Configuration, @Component 같은 빈을 스캔-->
+	<!-- root-context에서는 @Service, @Repository, @Configuration, @Component 같은 빈을 스캔 -->
 
 	<context:component-scan base-package="com.itwillbs.aop" />
 	<context:component-scan base-package="com.itwillbs.dao" />
@@ -55,8 +65,4 @@
 
 	<!-- 테스트용 빈 스캔 설정-->
 	<context:component-scan base-package="com.itwillbs.controller"/>
-
-
-
-
 </beans>

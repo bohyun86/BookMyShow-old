@@ -101,26 +101,51 @@ const alerts = [idAlert, pwAlert, pw2Alert, emailAlert, nameAlert, phoneAlert];
 
 
 // id 유효성 검사
-function checkId() {
-    const idValue = id.value;
-    const idRegExp = /^[a-zA-Z0-9_-]{4,20}$/;
+let debounceTimer;
 
-    if (idRegExp.test(idValue)) {
-        // 중복되는 아이디가 있는지 get요청 보내기
-        fetch(`/api/users/${idValue}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data) {
-                    idAlert.innerText = '이미 사용중인 아이디입니다.';
-                    idAlert.style.color = 'red';
-                } else {
-                    idAlert.innerText = '사용가능한 아이디입니다.';
-                    idAlert.style.color = 'blue';
+function checkId() {
+    clearTimeout(debounceTimer);
+
+    debounceTimer = setTimeout(() => {
+        const idValue = id.value;
+        const idRegExp = /^[a-zA-Z0-9_-]{4,20}$/;
+
+        if (idRegExp.test(idValue)) {
+            // 중복되는 아이디가 있는지 GET 요청 보내기
+            idAlert.innerText = '';
+
+            // GET 요청으로 ID 중복 검사
+            fetch(`checkUser?userName=${encodeURIComponent(idValue)}`, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'  // JSON 응답을 기대한다고 명시
                 }
-            });
-    } else {
-        idAlert.innerText = '4~20자의 영문, 숫자, 특수기호(_),(-)만 사용할 수 있어요.';
-    }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('response.ok');
+                        return response.json();
+                    } else {
+                        throw new Error('네트워크 반응이 없습니다.');
+                    }
+                })
+                .then(result => {
+                    if (result.result) {
+                        idAlert.innerText = '이미 사용중인 아이디입니다.';
+                        idAlert.style.color = 'red';
+                    } else {
+                        idAlert.innerText = '사용가능한 아이디입니다.';
+                        idAlert.style.color = 'blue';
+                    }
+                })
+                .catch(error => {
+                    idAlert.innerText = '에러가 발생했습니다.';
+                    idAlert.style.color = 'red';
+                });
+        } else {
+            idAlert.innerText = '4~20자의 영문, 숫자, 특수기호(_),(-)만 사용할 수 있어요.';
+        }
+    }, 300);
 }
 
 // 비밀번호 유효성 검사

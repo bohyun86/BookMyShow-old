@@ -6,8 +6,12 @@ import javax.persistence.Column;
 
 @Data
 public class UserDTO {
+
     @Column(name = "user_id")
     private int userId;
+
+    @Column(name = "user_name")
+    private String userName;
 
     @Column(name = "password")
     private String password;

@@ -1,12 +1,12 @@
 package com.itwillbs.controller;
 
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -14,6 +14,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
 @Log4j2
@@ -50,6 +54,24 @@ public class UserControllerTests {
 
         log.info(resultPage);
     }
+
+    @Test
+    public void testGetUser() throws Exception {
+        // GET 요청을 보내고 JSON 응답을 받음
+        String responseContent = mockMvc.perform(
+                        MockMvcRequestBuilders.get("/user/getUser")
+                                .param("userName", "test")
+                                .accept(MediaType.APPLICATION_JSON))  // JSON 형식의 응답을 기대
+                .andExpect(status().isOk())  // 상태 코드가 200 OK인지 확인
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))  // JSON 응답인지 확인
+                .andReturn().getResponse().getContentAsString();  // 응답 본문을 문자열로 가져옴
+
+        log.info(responseContent);
+
+        // 응답 내용이 true 또는 false인지 확인
+        assertEquals("true", responseContent);  // userName "admin"이 존재할 경우 true
+    }
+
 
 
 }

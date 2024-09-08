@@ -19,6 +19,13 @@ public class UserServiceImpl implements UserService {
 
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setUserId(userDTO.getUserId());
-        return (userMapper.insertUser(userDTO) == 1 && userMapper.insertMember(memberDTO) == 1);
+        userMapper.insertUser(userDTO);
+        userMapper.insertMember(memberDTO);
+        return true;
+    }
+
+    @Override
+    public UserDTO getUser(UserDTO userDTO) {
+        return userMapper.getUser(userDTO);
     }
 }

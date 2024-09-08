@@ -9,4 +9,6 @@ public interface UserMapper {
 
     int insertMember(MemberDTO memberDTO);
 
+    UserDTO getUser(UserDTO userDTO);
+
 }
