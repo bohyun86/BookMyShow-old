@@ -38,7 +38,7 @@ public class LoginController {
 
     }
 
-    @GetMapping("/checkUser")
+    @GetMapping("/checkUserId")
     @ResponseBody
     public ResponseEntity<Map<String, Boolean>> getUser(@RequestParam String userName) {
         log.info("getUser");
@@ -46,7 +46,20 @@ public class LoginController {
         UserDTO userDTO = new UserDTO();
         userDTO.setUserName(userName);
 
-        Boolean result = userServiceImpl.getUser(userDTO) != null;
+        Boolean result = userServiceImpl.checkId(userDTO) != null;
+        Map<String, Boolean> resultMap = Map.of("result", result);  // JSON 형식으로 변환될 Map 반환
+        return ResponseEntity.ok(resultMap);
+    }
+
+    @GetMapping("/checkUserEmail")
+    @ResponseBody
+    public ResponseEntity<Map<String, Boolean>> checkUserEmail(@RequestParam String userEmail) {
+        log.info("checkUserEmail");
+
+        UserDTO userDTO = new UserDTO();
+        userDTO.setEmail(userEmail);
+
+        Boolean result = userServiceImpl.checkEmail(userDTO) != null;
         Map<String, Boolean> resultMap = Map.of("result", result);  // JSON 형식으로 변환될 Map 반환
         return ResponseEntity.ok(resultMap);
     }

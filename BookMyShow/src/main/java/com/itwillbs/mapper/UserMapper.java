@@ -11,4 +11,6 @@ public interface UserMapper {
 
     UserDTO getUser(UserDTO userDTO);
 
+    UserDTO getUserByEmail(UserDTO userDTO);
+
 }

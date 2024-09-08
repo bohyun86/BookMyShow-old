@@ -99,7 +99,6 @@ const phoneAlert = document.querySelector('.input-alert-phone');
 const alerts = [idAlert, pwAlert, pw2Alert, emailAlert, nameAlert, phoneAlert];
 
 
-
 // id 유효성 검사
 let debounceTimer;
 
@@ -115,7 +114,7 @@ function checkId() {
             idAlert.innerText = '';
 
             // GET 요청으로 ID 중복 검사
-            fetch(`checkUser?userName=${encodeURIComponent(idValue)}`, {
+            fetch(`checkUserId?userName=${encodeURIComponent(idValue)}`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json'  // JSON 응답을 기대한다고 명시
@@ -138,7 +137,7 @@ function checkId() {
                         idAlert.style.color = 'blue';
                     }
                 })
-                .catch(error => {
+                .catch(_ => {
                     idAlert.innerText = '에러가 발생했습니다.';
                     idAlert.style.color = 'red';
                 });
@@ -186,13 +185,38 @@ function checkEmail() {
     const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (emailRegExp.test(emailValue)) {
-        emailAlert.innerText = '사용가능한 이메일입니다.';
-        emailAlert.style.color = 'blue';
+
+        fetch(`checkUserEmail?userEmail=${emailValue}`, {
+            method: 'get',
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('네트워크 반응이 없습니다.');
+                }
+            })
+            .then(result => {
+                if (result.result) {
+                    emailAlert.innerText = '이미 사용중인 이메일입니다.';
+                    emailAlert.style.color = 'red';
+                } else {
+                    emailAlert.innerText = '사용가능한 이메일입니다.';
+                    emailAlert.style.color = 'blue';
+                }
+            })
+            .catch(_ => {
+                emailAlert.innerText = '에러가 발생했습니다.';
+                emailAlert.style.color = 'red';
+            }) // catch, fetch
     } else {
         emailAlert.innerText = '이메일 형식을 확인해주세요.';
         emailAlert.style.color = 'red';
-    }
-}
+    } // else
+} // checkEmail
 
 function checkName() {
     if (name.value.trim() === '') {

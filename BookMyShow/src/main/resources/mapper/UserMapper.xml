@@ -18,7 +18,11 @@
     </insert>
 
     <select id="getUser" resultType="com.itwillbs.domain.UserDTO">
-        select * from User where user_name = #{userName}
+        select * from User where user_Name = #{userName}
+    </select>
+
+    <select id="getUserByEmail" resultType="com.itwillbs.domain.UserDTO">
+        select * from User where email = #{userEmail}
     </select>
 </mapper>
   

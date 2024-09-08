@@ -28,4 +28,14 @@ public class UserServiceImpl implements UserService {
     public UserDTO getUser(UserDTO userDTO) {
         return userMapper.getUser(userDTO);
     }
+
+    @Override
+    public UserDTO checkId(UserDTO userDTO) {
+        return userMapper.getUser(userDTO);
+    }
+
+    @Override
+    public UserDTO checkEmail(UserDTO userDTO) {
+        return userMapper.getUserByEmail(userDTO);
+    }
 }
