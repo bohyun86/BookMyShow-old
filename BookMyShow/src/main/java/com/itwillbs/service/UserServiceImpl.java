@@ -25,6 +25,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserDTO loginPro(UserDTO userDTO) {
+        return userMapper.loginPro(userDTO);
+    }
+
+    @Override
     public UserDTO getUser(UserDTO userDTO) {
         return userMapper.getUser(userDTO);
     }

@@ -12,7 +12,7 @@
 </head>
 <body class="bg-opacity-50">
 <div class="w-100 min-vh-100 d-flex justify-content-center align-items-center bg-white" >
-    <form class="p-5 shadow" id="login-form" method="post">
+    <form class="p-5 shadow" id="login-form" method="post" action="${pageContext.request.contextPath}/login/loginPro" >
         <h2 class="pb-3 text-center mt-5 mb-3"><a href="${pageContext.request.contextPath}/main/">예매하다</a></h2>
         <div class="form-group pb-2 d-flex row align-items-stretch">
             <div class="input-group my-2 px-0" id="id-input" >
@@ -21,7 +21,7 @@
                         <i class="bi bi-person"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control border-0" placeholder="아이디">
+                <input type="text" class="form-control border-0" placeholder="아이디" name="userName">
             </div>
             <div class="input-group my-2 px-0" id="pass-input">
                 <div class="input-group-prepend">
@@ -29,7 +29,7 @@
                         <i class="bi bi-lock"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control border-0" placeholder="비밀번호">
+                <input type="text" class="form-control border-0" placeholder="비밀번호" name="password">
             </div>
             <button type="submit" class="btn btn-primary w-100 fw-bolder my-2" id="login-button">로그인</button>
         </div>

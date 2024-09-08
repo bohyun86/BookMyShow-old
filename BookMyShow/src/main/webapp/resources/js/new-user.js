@@ -180,42 +180,49 @@ function checkPw2() {
 }
 
 // 이메일 유효성 검사
+let debounceTimer2;
+
+
 function checkEmail() {
     const emailValue = email.value;
     const emailRegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-    if (emailRegExp.test(emailValue)) {
+    clearTimeout(debounceTimer2);
 
-        fetch(`checkUserEmail?userEmail=${emailValue}`, {
-            method: 'get',
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('네트워크 반응이 없습니다.');
+    debounceTimer2 = setTimeout(() => {
+        if (emailRegExp.test(emailValue)) {
+
+            fetch(`checkUserEmail?email=${emailValue}`, {
+                method: 'get',
+                headers: {
+                    'Accept': 'application/json'
                 }
             })
-            .then(result => {
-                if (result.result) {
-                    emailAlert.innerText = '이미 사용중인 이메일입니다.';
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('네트워크 반응이 없습니다.');
+                    }
+                })
+                .then(result => {
+                    if (result.result) {
+                        emailAlert.innerText = '이미 사용중인 이메일입니다.';
+                        emailAlert.style.color = 'red';
+                    } else {
+                        emailAlert.innerText = '사용가능한 이메일입니다.';
+                        emailAlert.style.color = 'blue';
+                    }
+                })
+                .catch(_ => {
+                    emailAlert.innerText = '에러가 발생했습니다.';
                     emailAlert.style.color = 'red';
-                } else {
-                    emailAlert.innerText = '사용가능한 이메일입니다.';
-                    emailAlert.style.color = 'blue';
-                }
-            })
-            .catch(_ => {
-                emailAlert.innerText = '에러가 발생했습니다.';
-                emailAlert.style.color = 'red';
-            }) // catch, fetch
-    } else {
-        emailAlert.innerText = '이메일 형식을 확인해주세요.';
-        emailAlert.style.color = 'red';
-    } // else
+                }) // catch, fetch
+        } else {
+            emailAlert.innerText = '이메일 형식을 확인해주세요.';
+            emailAlert.style.color = 'red';
+        } // else
+    }, 300);
 } // checkEmail
 
 function checkName() {

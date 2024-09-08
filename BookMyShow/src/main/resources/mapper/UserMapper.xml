@@ -22,7 +22,11 @@
     </select>
 
     <select id="getUserByEmail" resultType="com.itwillbs.domain.UserDTO">
-        select * from User where email = #{userEmail}
+        select * from User where email = #{email}
+    </select>
+
+    <select id="loginPro" resultType="com.itwillbs.domain.UserDTO">
+        select * from User where user_name = #{userName} and password = #{password}
     </select>
 </mapper>
   

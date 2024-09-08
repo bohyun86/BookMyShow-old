@@ -5,25 +5,33 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.8.xsd">
 
-
     <bean id="customAccessDenied" class="com.itwillbs.security.CustomAccessDeniedHandler"/>
     <bean id="customLoginSuccess" class="com.itwillbs.security.CustomLoginSuccessHandler"/>
+
     <!-- HTTP 보안 설정 -->
     <security:http>
 
-        <security:intercept-url pattern="/sample/all" access="permitAll()"/>
+        <!-- URL 접근 권한 설정 -->
+        <!-- 나머지 모든 경로에 대해 접근 허용 -->
+        <security:intercept-url pattern="/**" access="permitAll()"/>
 
-        <security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
+        <!-- 특정 경로에 대해 접근 권한 설정 -->
+        <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
 
-        <security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')"/>
 
 
-        <security:form-login login-page="/login"
-        authentication-success-handler-ref="customLoginSuccess"/>
+<!--        <security:intercept-url pattern="/sample/all" access="permitAll()"/>-->
+<!--        <security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>-->
+<!--        <security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')"/>-->
 
-<!--        <security:access-denied-handler error-page="/accessError"/>-->
-        <security:access-denied-handler ref="customAccessDenied"/>
+        <!-- 로그인 페이지 및 성공 핸들러 설정 -->
+        <security:form-login login-page="/main"
+                             authentication-success-handler-ref="customLoginSuccess"/>
 
+        <!-- 접근 거부 처리 핸들러 -->
+        <security:access-denied-handler error-page="/login/"/>
+
+        <!-- 로그아웃 설정 -->
         <security:logout logout-success-url="/main" invalidate-session="true"/>
 
     </security:http>
@@ -33,18 +41,9 @@
         <security:authentication-provider>
             <security:user-service>
                 <security:user name="member" password="{noop}member" authorities="ROLE_MEMBER"/>
-
                 <security:user name="admin" password="{noop}admin" authorities="ROLE_MEMBER, ROLE_ADMIN"/>
-
             </security:user-service>
         </security:authentication-provider>
-
     </security:authentication-manager>
-
-
-
-
-
-
 
 </beans>

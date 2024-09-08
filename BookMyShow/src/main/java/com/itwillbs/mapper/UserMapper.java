@@ -9,6 +9,8 @@ public interface UserMapper {
 
     int insertMember(MemberDTO memberDTO);
 
+    UserDTO loginPro(UserDTO userDTO);
+
     UserDTO getUser(UserDTO userDTO);
 
     UserDTO getUserByEmail(UserDTO userDTO);

@@ -1,6 +1,7 @@
 package com.itwillbs.controller;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +15,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
+
+import java.util.Map;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -59,17 +63,17 @@ public class UserControllerTests {
     public void testGetUser() throws Exception {
         // GET 요청을 보내고 JSON 응답을 받음
         String responseContent = mockMvc.perform(
-                        MockMvcRequestBuilders.get("/user/getUser")
-                                .param("userName", "test")
+                        MockMvcRequestBuilders.get("/login/checkUserId")
+                                .param("userName", "admin")
                                 .accept(MediaType.APPLICATION_JSON))  // JSON 형식의 응답을 기대
-                .andExpect(status().isOk())  // 상태 코드가 200 OK인지 확인
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))  // JSON 응답인지 확인
+                .andExpect(status().isOk())  // 상태 코드 200 확인
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))  // 응답의 Content-Type 확인
                 .andReturn().getResponse().getContentAsString();  // 응답 본문을 문자열로 가져옴
 
-        log.info(responseContent);
+        log.info(responseContent);  // 응답 내용을 로깅
 
-        // 응답 내용이 true 또는 false인지 확인
-        assertEquals("true", responseContent);  // userName "admin"이 존재할 경우 true
+        // JSON 응답이 {"result":true}인지 확인
+        assertEquals("{\"result\":true}", responseContent);
     }
 
 

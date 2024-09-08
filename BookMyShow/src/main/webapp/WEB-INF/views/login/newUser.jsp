@@ -13,7 +13,7 @@
 </head>
 <body class="bg-opacity-50">
 <div class="w-100 min-vh-100 d-flex justify-content-center align-items-center bg-white">
-    <form class="p-5" id="join-form">
+    <form class="p-5" id="join-form" action="${pageContext.request.contextPath}/user/joinPro" method="post">
         <h2 class="pb-3 text-center mt-5"><a class="site-logo" href="${pageContext.request.contextPath}/main/">예매하다</a></h2>
         <div class="form-group pb-2 d-flex row align-items-stretch justify-content-center">
             <div class="input-group  px-0" id="id-input">
