@@ -29,7 +29,7 @@
                         <i class="bi bi-lock"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control border-0" placeholder="비밀번호" name="password">
+                <input type="password" class="form-control border-0" placeholder="비밀번호" name="password">
             </div>
             <button type="submit" class="btn btn-primary w-100 fw-bolder my-2" id="login-button">로그인</button>
         </div>

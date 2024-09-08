@@ -13,7 +13,7 @@
 </head>
 <body class="bg-opacity-50">
 <div class="w-100 min-vh-100 d-flex justify-content-center align-items-center bg-white">
-    <form class="p-5" id="join-form" action="${pageContext.request.contextPath}/user/joinPro" method="post">
+    <form class="p-5" id="join-form" action="${pageContext.request.contextPath}/user/joinPro/" method="post">
         <h2 class="pb-3 text-center mt-5"><a class="site-logo" href="${pageContext.request.contextPath}/main/">예매하다</a></h2>
         <div class="form-group pb-2 d-flex row align-items-stretch justify-content-center">
             <div class="input-group  px-0" id="id-input">
@@ -22,7 +22,7 @@
                         <i class="bi bi-person"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control border-0" name="user_id" placeholder="아이디" autofocus>
+                <input type="text" class="form-control border-0" name="userName" placeholder="아이디" autofocus>
             </div>
             <div class="input-alert-id input-alert"></div>
             <div class="input-group  px-0" id="pass-input">
@@ -67,7 +67,7 @@
                         <i class="bi bi-phone"></i>
                     </span>
                 </div>
-                <input type="text" class="form-control border-0" name="phone" placeholder="휴대폰번호">
+                <input type="text" class="form-control border-0" name="phoneNumber" placeholder="휴대폰번호">
             </div>
             <div class="input-alert-phone input-alert"></div>
             <div class="section-title mt-5">이용약관 동의</div>
@@ -99,6 +99,7 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" name="userRole" value="member">
             <button type="submit" class="btn btn-primary fw-bolder my-2 mt-4" id="join-button">가입완료</button>
         </div>
     </form>

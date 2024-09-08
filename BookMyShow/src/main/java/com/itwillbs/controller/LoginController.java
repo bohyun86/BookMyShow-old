@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
@@ -27,11 +28,15 @@ public class LoginController {
     }
 
     @PostMapping("/loginPro")
-    public String loginPro(UserDTO userDTO) {
+    public String loginPro(UserDTO userDTO, HttpSession session) {
         log.info("loginPro: {}", userDTO);
-        if (userServiceImpl.loginPro(userDTO) == null) {
+        UserDTO getUser = userServiceImpl.loginPro(userDTO);
+        if (getUser == null) {
             return "redirect:/login/";
         } else {
+            log.info(getUser);
+            session.setAttribute("userId", getUser.getUserId());
+            session.setAttribute("userRole", getUser.getUserRole());
             return "redirect:/main/";
         }
     }
@@ -40,14 +45,16 @@ public class LoginController {
     public void join() {
     }
 
+    @PostMapping("/JoinPro")
+    public void newUserPro(UserDTO userDTO) {
+        userServiceImpl.insertUser(userDTO);
+    }
+
     @GetMapping("/newUser")
     public void newUser() {
     }
 
-    @PostMapping("/newUserPro")
-    public void newUserPro() {
 
-    }
 
     @GetMapping(value="/checkUserId", produces= MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -76,8 +83,10 @@ public class LoginController {
     }
 
     @GetMapping("/logout")
-    public void logout() {
+    public String logout(HttpSession session) {
         log.info("logout success");
+        session.invalidate();
+        return "redirect:/main/";
     }
 
 

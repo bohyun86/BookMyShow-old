@@ -5,6 +5,19 @@
 
 <mapper namespace="com.itwillbs.mapper.UserMapper">
 
+    <resultMap id="userResultMap" type="com.itwillbs.domain.UserDTO">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="email" column="email"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="name" column="name"/>
+        <result property="userRole" column="user_role"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="memberId" column="member_id"/>
+    </resultMap>
+
     <!-- User 삽입 시, 생성된 user_id 값을 자동으로 가져오도록 설정 -->
     <insert id="insertUser" useGeneratedKeys="true" keyProperty="userId">
         insert into User(user_id, user_name, password, email, phone_number, name, user_role, updated_at)
@@ -17,7 +30,7 @@
         values(#{memberId}, #{userId})
     </insert>
 
-    <select id="getUser" resultType="com.itwillbs.domain.UserDTO">
+    <select id="getUser" resultType="com.itwillbs.domain.UserDTO" resultMap="userResultMap">
         select * from User where user_Name = #{userName}
     </select>
 
@@ -25,7 +38,7 @@
         select * from User where email = #{email}
     </select>
 
-    <select id="loginPro" resultType="com.itwillbs.domain.UserDTO">
+    <select id="loginPro" resultType="com.itwillbs.domain.UserDTO" resultMap="userResultMap">
         select * from User where user_name = #{userName} and password = #{password}
     </select>
 </mapper>

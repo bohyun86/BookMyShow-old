@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
         MemberDTO memberDTO = new MemberDTO();
         memberDTO.setUserId(userDTO.getUserId());
         userMapper.insertUser(userDTO);
+        memberDTO.setUserId(userDTO.getUserId());
         userMapper.insertMember(memberDTO);
         return true;
     }

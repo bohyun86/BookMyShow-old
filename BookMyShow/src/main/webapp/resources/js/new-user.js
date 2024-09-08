@@ -80,12 +80,12 @@ function checkDisagreeAll() {
 
 // 입력필드 alert ===================================================================================
 
-const id = document.querySelector('input[name="user_id"]');
+const id = document.querySelector('input[name="userName"]');
 const pw = document.querySelector('input[name="password"]');
 const pw2 = document.querySelector('input[name="password2"]');
 const email = document.querySelector('input[name="email"]');
 const name = document.querySelector('input[name="name"]');
-const phone = document.querySelector('input[name="phone"]');
+const phone = document.querySelector('input[name="phoneNumber"]');
 
 const inputs = [id, pw, pw2, email, name, phone];
 

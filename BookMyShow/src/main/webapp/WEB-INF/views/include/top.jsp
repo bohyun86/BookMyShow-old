@@ -1,28 +1,34 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ITWILL
-  Date: 2024-09-02
-  Time: 오후 4:29
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <header class="w-100 bg-white sticky-top border-bottom">
     <div class="d-flex row p-0" id="sticky">
         <ul class="nav justify-content-end pt-3" id="top-nav">
-            <li class="nav-item" >
-                <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/">로그인</a>
-            </li>
-<%--          <li class="nav-item">
-           <form action="${pageContext.request.contextPath}/logout" method="post">
-              <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-              <input type="submit" class="nav-link text-black" value="로그아웃">
-          </form>
-           </li>--%>
-            <li class="nav-item">
-                <a class="nav-link text-black" href="${pageContext.request.contextPath}/login/join">회원가입</a>
-            </li>
+            <c:if test="${sessionScope.userId == null}">
+                <li class="nav-item">
+                    <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/">로그인</a>
+                </li>
+            </c:if>
+            <c:if test="${sessionScope.userId != null}">
+                <li class="nav-item">
+                    <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/logout/">로그아웃</a>
+                </li>
+            </c:if>
+            <c:if test="${sessionScope.userRole == 'admin'}">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="${pageContext.request.contextPath}/admin/">관리자 페이지</a>
+                </li>
+            </c:if>
+            <c:if test="${sessionScope.userRole == 'member'}">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="${pageContext.request.contextPath}/mypage/">마이페이지</a>
+                </li>
+            </c:if>
+            <c:if test="${sessionScope.userRole == null}">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="${pageContext.request.contextPath}/login/join">회원가입</a>
+                </li>
+            </c:if>
             <li class="nav-item">
                 <a class="nav-link text-black" id="cs-dropdown" href="${pageContext.request.contextPath}/support/faq">고객센터</a>
                 <!-- Dropdown menu -->
