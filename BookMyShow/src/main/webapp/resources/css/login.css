@@ -72,6 +72,11 @@
     text-decoration: none;
 }
 
-
+.site-logo {
+    text-decoration: none;
+    color: #ff4b4b;
+    font-size: 30px;
+    font-weight: bold;
+}
 
 
