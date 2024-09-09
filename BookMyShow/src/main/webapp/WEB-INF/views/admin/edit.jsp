@@ -73,7 +73,11 @@
    <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg" class="img-thumbnail" alt="new1" style="width: 100px">
    옥탑방 고양이
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="btn btn-outline-primary btn-sm" href="${pageContext.request.contextPath}/admin/editPro" role="button">수정</a>
+  <a class="btn btn-outline-primary btn-sm" href="${pageContext.request.contextPath}/admin/editPro" role="button">수정</a> &nbsp;&nbsp;
+  <form action="${pageContext.request.contextPath}/admin/edit">
+  		<a class="btn btn-outline-danger" type="submit" onclick="deleteok()" >삭제</a>
+  </form>
+  
   </div>
   </button>
  
@@ -81,7 +85,10 @@
    <img src="${pageContext.request.contextPath}/resources/images/poster/newopen2.jpg" class="img-thumbnail" alt="new2" style="width: 100px">
    최상급 요트에서 특별한 여행 추억 쌓기!
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>&nbsp;&nbsp;
+  <form action="${pageContext.request.contextPath}/admin/edit">
+  		<a class="btn btn-outline-danger" type="submit" onclick="deleteok()" >삭제</a>
+  </form>
   </div>
   </button>
   
@@ -90,7 +97,10 @@
    <img src="${pageContext.request.contextPath}/resources/images/poster/newopen3.jpg" class="img-thumbnail" alt="new3" style="width: 100px">
   어린이 CAT
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>&nbsp;&nbsp;
+  <form action="${pageContext.request.contextPath}/admin/edit">
+  		<a class="btn btn-outline-danger" type="submit" onclick="deleteok()" >삭제</a>
+  </form>
   </div>
    </button>
   
@@ -98,7 +108,10 @@
    <img src="${pageContext.request.contextPath}/resources/images/poster/newopen4.jpg" class="img-thumbnail" alt="new4" style="width: 100px">
    썸데이
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>
+  <a class="btn btn-outline-primary btn-sm" href="#" role="button">수정</a>&nbsp;&nbsp;
+  <form action="${pageContext.request.contextPath}/admin/edit">
+  		<a class="btn btn-outline-danger" type="submit" onclick="deleteok()" >삭제</a>
+  </form>
   </div>
   </button>
 
@@ -108,7 +121,7 @@
 
 
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <ul class="pagination justify-content-center">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
@@ -127,6 +140,18 @@
 
 </div>
 </div>
+
+<script>
+
+
+function deleteok(){
+    if(!confirm('삭제하시면 복구할수 없습니다. \n 정말로 삭제하시겠습니까??')){
+        return false;
+    }
+}
+
+</script>
+
 <!-- 					<div class="ecommerce-widget">  -->
 
 <!--                     <div class="row"> -->
