@@ -18,7 +18,6 @@
 </head>
 <body id="board-body">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice-1.css">
 <jsp:include page="../include/top.jsp"/>
 
 <main class="row d-flex justify-content-between align-items-center" id="board-main">
@@ -26,9 +25,9 @@
         <div class="title">
             고객센터
         </div>
-        <div class="noticelist">
+        <div>
             <ul class="list-group list-group-flush mt-3">
-                <li class="list-group-item "><a href="${pageContext.request.contextPath}/notice/notice">공지사항</a></li>
+                <li class="list-group-item "><span class="noticelist" href="${pageContext.request.contextPath}/notice/notice">공지사항</span></li>
                 <li class="list-group-item "><a>자주 묻는 질문</a></li>
                 <li class="list-group-item "><a>1:1문의</a></li>
             </ul>
@@ -38,17 +37,23 @@
         <div class="title">
             공지사항
             
+    <ul class="notice-header">
+		<li style="width:35px;">번호</li>
+		<li style="width:570px;">제목</li>
+		<li style="width:80px">작성일</li>
+	</ul>
+            
         </div>
     </section>
 </main>
 
-<div id="page">
+<div id="noticenum">
 <span onclick="location.reload();" style="cursor:pointer"><b class="now">1</b></span>
 <a href="/bbs_list.php?tb=board_notice&amp;pg=2&amp;number=&amp;category=" class="pgnum">2</a>
 <a href="/bbs_list.php?tb=board_notice&amp;pg=3&amp;number=&amp;category=" class="pgnum">3</a>
 <a href="/bbs_list.php?tb=board_notice&amp;pg=4&amp;number=&amp;category=" class="pgnum">4</a>
 <a href="/bbs_list.php?tb=board_notice&amp;pg=5&amp;number=&amp;category=" class="pgnum">5</a>
-..<a href="/bbs_list.php?tb=board_notice&amp;pg=6&amp;number=&amp;category=" class="next">다음</a></div>
+<b>>></b><a href="/bbs_list.php?tb=board_notice&amp;pg=6&amp;number=&amp;category=" class="next">다음</a></div>
 
 <jsp:include page="../include/bottom.jsp"/>
 
