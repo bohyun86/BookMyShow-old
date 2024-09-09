@@ -15,6 +15,7 @@ public class MainController {
         
         return "/main/main";
     }
+
     
     @GetMapping("/notice/notice")
 	public String notice() {
@@ -23,5 +24,4 @@ public class MainController {
 		return "/notice/notice";
 	}
 	
-    
 }

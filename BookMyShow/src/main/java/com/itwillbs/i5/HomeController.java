@@ -14,12 +14,15 @@ public class HomeController {
 	public String home() {
 
 		return "redirect:/main";
+
 	}
 
     @GetMapping("/notice")
 	public String notice() {
 
 		return "/notice/notice";
+
 	}
+
 	
 }

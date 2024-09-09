@@ -10,6 +10,7 @@
 <div class="nav-left-sidebar sidebar-dark">
     <div class="menu-list">
         <nav class="navbar navbar-expand-lg navbar-light">
+
             <a class="d-xl-none d-lg-none" href="${pageContext.request.contextPath}/admin/main/">관리자 페이지</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +21,7 @@
                     <li class="nav-divider">
                         MENU
                     </li>
+
                     
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
@@ -31,6 +33,31 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="${pageContext.request.contextPath}/admin/edit/">뮤지컬수정/삭제</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                           data-target="#submenu-3" aria-controls="submenu-3">메뉴 3(collapse)</a>
+                        <div id="submenu-3" class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴4</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">하위메뉴5</a>
                                 </li>
                             </ul>
                         </div>
