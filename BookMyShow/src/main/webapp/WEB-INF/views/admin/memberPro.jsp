@@ -148,9 +148,11 @@
 				 										
 				 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
   															<button class="btn btn-primary me-md-2" type="submit" >수정완료</button> &nbsp; &nbsp;
-  																<button class="btn btn-primary" type="button" href="#">삭제</button>
-														</div>
 														</form>
+  																<form action="${pageContext.request.contextPath}/admin/member">
+  																<button class="btn btn-primary" type="submit" onclick="deleteok()">삭제</button>
+  																</form>
+														</div>
     												</div>
   												</div>
 											</div>
@@ -164,6 +166,16 @@
   </div>
               </div>
 
+<script>
+
+
+function deleteok(){
+    if(!confirm('삭제하시면 복구할수 없습니다. \n 정말로 삭제하시겠습니까??')){
+        return false;
+    }
+}
+
+</script>
 
 
 

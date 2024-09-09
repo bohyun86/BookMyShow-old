@@ -181,7 +181,7 @@
   															</form>
   															
   															<form action="${pageContext.request.contextPath}/admin/edit">
-  																<button class="btn btn-primary" type="button" id="delete" >삭제</button>
+  																<button class="btn btn-primary" type="submit" onclick="deleteok()" >삭제</button>
   																</form>
 														</div>
 														
@@ -206,6 +206,12 @@
 <script>
 
 document.getElementById('startDate').value = new Date().toISOString().substring(0, 10);;
+
+function deleteok(){
+    if(!confirm('삭제하시면 복구할수 없습니다. \n 정말로 삭제하시겠습니까??')){
+        return false;
+    }
+}
 
 </script>
 

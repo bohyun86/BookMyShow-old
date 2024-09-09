@@ -94,11 +94,13 @@
      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
      <input type="text" name="answer" placeholder="기존답변 ---">&nbsp;
   <button class="btn btn-primary me-md-2" type="sumit" href="#" >수정완료</button> &nbsp;&nbsp;
-  <button class="btn btn-primary me-md-2" type="button" href="#" >삭제</button>
+</form>
+  <form action="${pageContext.request.contextPath}/admin/partner">
+  	<button class="btn btn-primary" type="submit" onclick="deleteok()">삭제</button>
+  	</form>
   </div>
 </div>
 </div>
-</form>
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
   <button class="btn btn-primary me-md-2" type="reset" onclick = "location.href='${pageContext.request.contextPath}/admin/partner'" >돌아가기</button>&nbsp;&nbsp;
@@ -106,6 +108,18 @@
 
    </div>
                 </div>
+                
+                <script>
+	
+
+function deleteok(){
+    if(!confirm('삭제하시면 복구할수 없습니다. \n 정말로 삭제하시겠습니까??')){
+        return false;
+    }
+}
+
+</script>
+                
 
 <!-- 					<div class="ecommerce-widget">  -->
 
