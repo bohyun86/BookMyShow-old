@@ -1,13 +1,12 @@
 @charset "UTF-8";
 
 /* 카드 스타일 */
-.detail-card {
+.detail-card, .refund-card, .booking-complete-card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 30px;
     margin-bottom: 20px;
-    
 }
 
 /* 행 스타일 */
@@ -51,21 +50,24 @@
     color: #dc3545;
 }
 
-/* 버튼 스타일 */
-.action-button {
+/* 버튼 스타일 통합 */
+.action-button,
+.action-buttons .btn {
     margin-left: 10px;
     white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 1.1rem;
 }
 
 /* 환불 정보 스타일 */
-.refund-info {
+.refund-info, .ticket-info, .refund-notice {
     background-color: #f8f9fa;
     border-radius: 5px;
     padding: 15px;
     margin-top: 20px;
 }
 
-.refund-info p {
+.refund-info p, .ticket-info li {
     margin-bottom: 5px;
     font-size: 0.9em;
     color: #666;
@@ -74,14 +76,6 @@
 /* main-content 높이 조정 */
 #board-content {
     min-height: calc(100vh - 200px); /* 예상 헤더/푸터 높이를 뺀 값 */
-}
-
-.refund-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 30px;
-    margin-bottom: 20px;
 }
 
 .booking-info {
@@ -103,26 +97,111 @@
     flex: 1;
 }
 
-.info h2 {
+.info h2, .booking-complete-card h2 {
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.refund-details h3 {
+.booking-complete-card h2 {
+    color: #28a745;
+}
+
+.refund-details h3, .ticket-info h3 {
     margin-top: 30px;
     margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
 }
 
-.refund-notice {
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-.refund-notice ul {
+.refund-notice ul, .ticket-info ul {
     padding-left: 20px;
 }
 
 #refundButton {
     width: 100%;
+}
+
+.ticket-info {
+    padding: 20px;
+}
+
+.ticket-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.ticket-info li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.refund-complete-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.refund-complete-card h2 {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.refund-details, .refund-notice {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.refund-details h3, .refund-notice h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.refund-details ul, .refund-notice ul {
+    padding-left: 0;
+}
+
+.refund-details li, .refund-notice li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.refund-notice li {
+    padding-left: 20px;
+    position: relative;
+}
+
+.withdrawal-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.withdrawal-steps h5 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.withdrawal-steps ul {
+    padding-left: 20px;
+}
+
+.withdrawal-steps li {
+    margin-bottom: 10px;
+}
+
+.withdrawal-steps textarea {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.action-buttons .btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
 }

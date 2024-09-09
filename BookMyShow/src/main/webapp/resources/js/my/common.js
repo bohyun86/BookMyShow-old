@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initRefundProcess();
     initSeatCheck();
     initReviewWriting();
+    initBookingComplete();
+    initWithdrawal();
 });
 
 function initAddressCopy() {
@@ -91,5 +93,35 @@ function writeReview(bookingId, hasReview) {
         window.location.href = `${contextPath}/my/review-edit/${bookingId}`;
     } else {
         window.location.href = `${contextPath}/my/review-write/${bookingId}`;
+    }
+}
+
+function initBookingComplete() {
+    console.log('예매 완료 페이지 초기화');
+    // 예매 완료 페이지에 특화된 기능을 여기에 추가
+}
+
+function showTicketInfo() {
+    alert('티켓 정보: 공연 당일 매표소에서 예매번호와 신분증을 제시해 주세요.');
+}
+
+function initWithdrawal() {
+    const withdrawalButton = document.getElementById('withdrawalButton');
+    const cancelButton = document.getElementById('cancelButton');
+
+    if (withdrawalButton) {
+        withdrawalButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (confirm('정말로 탈퇴하시겠습니까? 이 작업은 취소할 수 없습니다.')) {
+                document.getElementById('withdrawalForm').submit();
+            }
+        });
+    }
+
+    if (cancelButton) {
+        cancelButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            history.back();
+        });
     }
 }
