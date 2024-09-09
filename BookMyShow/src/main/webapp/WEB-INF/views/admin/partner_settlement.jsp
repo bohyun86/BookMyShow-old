@@ -54,12 +54,13 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title" >관리자메인페이지 </h2>
+                            <h2 class="pageheader-title" >파트너 정산페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
                     </div>
                 </div>
+            
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
@@ -68,30 +69,112 @@
 
 
 
-<!-- 					↓주석 풀면 주소 주소이동x 일단 주석처리 -->
-<!-- 				String id =(String)session.getAttribute("id"); -->
+				${sessionScope.id }파트너님의 정산내역입니다.<br>
 				
-<%-- 				<c:if test="${empty sessionScope.id }"> --%>
-<%-- 					<c:redirect url="${pageContext.request.contextPath}/main/main"/> --%>
-<%-- 				</c:if> --%>
+				<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+  					<div class="card-header">정산내역</div>
+  						<div class="card-body">
+    						<p class="card-text">
+    
+    							<table class="table">
+									  <thead>
+									    <tr>
+									      <th scope="col">#</th>
+									      <th scope="col">결제수단</th>
+									      <th scope="col">건수</th>
+									      <th scope="col">금액</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <th scope="row">1</th>
+									      <td>현금</td>
+									      <td>~건</td>
+									      <td>~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">2</th>
+									      <td>카드</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">3</th>
+									      <td>합계</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									  </tbody>
+									</table>
+									</p>
+									  </div>
+									</div>
 
+									<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+									  <div class="card-header">정산내역</div>
+									  <div class="card-body">
+									    <p class="card-text">
+									    
+									     <table class="table">
+									  <thead>
+									    <tr>
+									      <th scope="col">#</th>
+									      <th scope="col">결제수단</th>
+									      <th scope="col">건수</th>
+									      <th scope="col">금액</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <th scope="row">1</th>
+									      <td>현금</td>
+									      <td>~건</td>
+									      <td>~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">2</th>
+									      <td>카드</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									    <tr>
+									      <th scope="row">3</th>
+									      <td>합계</td>
+									      <td>~건</td>
+									      <td>@~원</td>
+									    </tr>
+									  </tbody>
+									</table>
+									    
+									    </p>
+									  </div>
+									</div>
 				
-<%-- 				<c:if test="${ !empty sessionScope.id}"> --%>
-<%-- 			<c:if test="${sessionScope.id == 'admin' }"> --%>
-			
-				${sessionScope.id }님이 로그인 하셨습니다.<br>
-<!-- 				관리자 아이디로 로그인 하셨습니다 -->
-<%-- 				<a href ="${pageContext.request.contextPath}/musical/insert">뮤지컬등록</a><br> <%// 관리자만 사용가능 %> --%>
-<!-- 				<a href = "write.bo">글쓰기</a><br> -->
-<!-- 				<a href = "list.bo">글목록</a><br> -->
-			
-<%-- 			</c:if>		 --%>
-<%-- 		</c:if> --%>
-				
-				  </div>
+				 					<table class="table">
+										  <thead>
+										    <tr>
+										      <th >수수료</th>
+										      <th >총매출</th>
+										    </tr>
+										  </thead>
+										  
+										  <tbody>
+										  <tr>
+										      <th >~원</th>
+										      <td>~원</td>
+										    </tr>
+										  </tbody>
+										  
+										  
+										</table>
+
+
+											<p><div class="d-grid gap-2 col-6 mx-auto">
+											  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/partner'">돌아가기</button>
+											</div></p>
+
+    </div>
                 </div>
-
-
 
 <!-- 					<div class="ecommerce-widget">  -->
 

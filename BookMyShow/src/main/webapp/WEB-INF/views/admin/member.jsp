@@ -32,7 +32,7 @@
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title >예매하다. 관리자 페이지</title>
+    <title>예매하다. 관리자 페이지</title>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title" >관리자메인페이지 </h2>
+                            <h2 class="pageheader-title">회원검색페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
@@ -66,32 +66,39 @@
                  
 <!-- ==================================================== -->
 
-
-
-<!-- 					↓주석 풀면 주소 주소이동x 일단 주석처리 -->
-<!-- 				String id =(String)session.getAttribute("id"); -->
-				
-<%-- 				<c:if test="${empty sessionScope.id }"> --%>
-<%-- 					<c:redirect url="${pageContext.request.contextPath}/main/main"/> --%>
-<%-- 				</c:if> --%>
-
-				
-<%-- 				<c:if test="${ !empty sessionScope.id}"> --%>
-<%-- 			<c:if test="${sessionScope.id == 'admin' }"> --%>
 			
-				${sessionScope.id }님이 로그인 하셨습니다.<br>
-<!-- 				관리자 아이디로 로그인 하셨습니다 -->
-<%-- 				<a href ="${pageContext.request.contextPath}/musical/insert">뮤지컬등록</a><br> <%// 관리자만 사용가능 %> --%>
-<!-- 				<a href = "write.bo">글쓰기</a><br> -->
-<!-- 				<a href = "list.bo">글목록</a><br> -->
-			
-<%-- 			</c:if>		 --%>
-<%-- 		</c:if> --%>
 				
-				  </div>
+<%-- <h1 class="text-center m-3">[검색어:<%=findKeyword %> ] 검색 결과</h1>				 --%>
+<form name="findF" action="#" class="form-inline">
+
+	<select name="findType" class="form-control mr-2">
+		<option value="">::검색 유형::</option>
+		<option value="1">이름</option>
+		<option value="2">아이디</option>
+		<option value="3">이메일</option>
+	</select>
+		<input type="text" name="findKeyword" placeholder="검색어를 입력하세요" class="form-control mr-2">
+			<button class="btn btn-success">검 색</button>
+</form>
+
+<ul class="list-group">
+  <li class="list-group-item">검색된 회원 정보 띄우기</li>
+</ul>
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/memberPro'">정보 조회 및 수정</button>
+</div></p> 
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button" onclick = "location.href='${pageContext.request.contextPath}/admin/booking'">예매내역</button>
+</div></p>
+
+<p><div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-primary" type="button"  onclick = "location.href='${pageContext.request.contextPath}/admin/payment'">결제내역</button>
+</div></p>
+
+  </div>
                 </div>
-
-
 
 <!-- 					<div class="ecommerce-widget">  -->
 
