@@ -16,5 +16,10 @@ public class HomeController {
 		return "redirect:/main";
 	}
 
+    @GetMapping("/notice")
+	public String notice() {
+
+		return "/notice/notice";
+	}
 	
 }
