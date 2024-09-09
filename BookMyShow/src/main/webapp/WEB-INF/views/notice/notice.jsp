@@ -11,11 +11,39 @@
 </head>
 <body>
 
+<link rel="stylesheet" href="css/style1.css">
+<ul id="top_gnb">
+  <li>
+    <a href="">로그인</a>
+  </li>
+  <li>
+    <a href="">회원가입</a>
+  </li>
+  <li>
+    <a href="">
+      고객센터
+    </a>
+    <ul style="visibility: hidden;">
+      <li><a href="">공지사항</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="">1:1문의</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+    </div>
+    <!-- <div style="position:absolute; top:60px; right:0; z-index:1;">
+      <a href="event.php?no=202407" id="202407_wbnr_top">
+        <img src="talk/event/2024/07/202407_wbnr_top.png" style="width:190px;" alt="2024 여름방학 기획전"/>
+      </a>
+    </div> -->
+  </div>
 
 <div class="gnb_wrap" style="height:55px; padding-top:2px;">
     <a href=""></a>
     <div style="position:absolute; top:2px; left:335px;">
-      <style type="notice/css">
+      <style type="text/css">
     input:focus {
         outline: none;
     }
@@ -154,33 +182,7 @@
   document.onclick = top_gnb_close;
 </script>
 
-<ul id="top_gnb">
-  <li>
-    <a href="">로그인</a>
-  </li>
-  <li>
-    <a href="">회원가입</a>
-  </li>
-  <li>
-    <a href="">
-      고객센터
-    </a>
-    <ul style="visibility: hidden;">
-      <li><a href="">공지사항</a></li>
-      <li><a href="">FAQ</a></li>
-      <li><a href="">1:1문의</a></li>
-    </ul>
-  </li>
-</ul>
 
-
-    </div>
-    <!-- <div style="position:absolute; top:60px; right:0; z-index:1;">
-      <a href="event.php?no=202407" id="202407_wbnr_top">
-        <img src="talk/event/2024/07/202407_wbnr_top.png" style="width:190px;" alt="2024 여름방학 기획전"/>
-      </a>
-    </div> -->
-  </div>
 
 <div class="mypage_left_wrap" style="height: 783px;">
 
@@ -218,7 +220,7 @@
 	</ul>
 
 	<div class="bbs_list_paging" "="">
-        <style type="notice/css">
+        <style type="text/css">
           #page{text-align:center; padding:0 0 30px 0;}
           #page a,div#page b{border:1px solid #d9d9d9; color:#555; font-size:14px; padding:5px 9px; margin:0 2px; background:#fff; }
           #page a:hover{text-decoration:none; color:black; background:#ededed;}

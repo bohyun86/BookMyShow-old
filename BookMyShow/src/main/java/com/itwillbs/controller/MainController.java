@@ -16,8 +16,12 @@ public class MainController {
         return "/main/main";
     }
     
-    @GetMapping("/notice")
+    @GetMapping("/notice/notice")
 	public String notice() {
+    	log.info("notice success");
+
 		return "/notice/notice";
 	}
+	
+    
 }
