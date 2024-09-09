@@ -11,34 +11,7 @@
 </head>
 <body>
 
-<link rel="stylesheet" href="css/style1.css">
-<ul id="top_gnb">
-  <li>
-    <a href="">로그인</a>
-  </li>
-  <li>
-    <a href="">회원가입</a>
-  </li>
-  <li>
-    <a href="">
-      고객센터
-    </a>
-    <ul style="visibility: hidden;">
-      <li><a href="">공지사항</a></li>
-      <li><a href="">FAQ</a></li>
-      <li><a href="">1:1문의</a></li>
-    </ul>
-  </li>
-</ul>
-
-
-    </div>
-    <!-- <div style="position:absolute; top:60px; right:0; z-index:1;">
-      <a href="event.php?no=202407" id="202407_wbnr_top">
-        <img src="talk/event/2024/07/202407_wbnr_top.png" style="width:190px;" alt="2024 여름방학 기획전"/>
-      </a>
-    </div> -->
-  </div>
+<jsp:include page="../notice/notitop.jsp"/>
 
 <div class="gnb_wrap" style="height:55px; padding-top:2px;">
     <a href=""></a>
