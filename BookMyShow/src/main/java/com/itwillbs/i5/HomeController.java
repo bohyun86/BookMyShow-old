@@ -1,7 +1,6 @@
 package com.itwillbs.i5;
 
 import org.springframework.stereotype.Controller;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,6 +14,14 @@ public class HomeController {
 	public String home() {
 
 		return "redirect:/main";
+
+	}
+
+    @GetMapping("/notice")
+	public String notice() {
+
+		return "/notice/notice";
+
 	}
 
 	
