@@ -5,6 +5,7 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -18,4 +19,13 @@ public class MainController {
 
         return "/main/main";
     }
+    
+    @GetMapping("/notice/notice")
+	public String notice() {
+    	log.info("notice success");
+
+		return "/notice/notice";
+	}
+	
+    
 }

@@ -32,7 +32,7 @@
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/admin_partner/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title >예매하다. 관리자 페이지</title>
+    <title>예매하다. 관리자 페이지</title>
 </head>
 
 <body>
@@ -48,25 +48,26 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content ">
+            
                 <!-- ============================================================== -->
                 <!-- pageheader  -->
                 <!-- ============================================================== -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title" >관리자메인페이지 </h2>
+                            <h2 class="pageheader-title">뮤지컬등록페이지 </h2>
                             <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel
                                 mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                         </div>
                     </div>
                 </div>
+                 
+                
                 <!-- ============================================================== -->
                 <!-- end pageheader  -->
                 <!-- ============================================================== -->
                  
 <!-- ==================================================== -->
-
-
 
 <!-- 					↓주석 풀면 주소 주소이동x 일단 주석처리 -->
 <!-- 				String id =(String)session.getAttribute("id"); -->
@@ -79,7 +80,7 @@
 <%-- 				<c:if test="${ !empty sessionScope.id}"> --%>
 <%-- 			<c:if test="${sessionScope.id == 'admin' }"> --%>
 			
-				${sessionScope.id }님이 로그인 하셨습니다.<br>
+				${sessionScope.id }파트너님이 승인 요청중인 뮤지컬입니다.<br>
 <!-- 				관리자 아이디로 로그인 하셨습니다 -->
 <%-- 				<a href ="${pageContext.request.contextPath}/musical/insert">뮤지컬등록</a><br> <%// 관리자만 사용가능 %> --%>
 <!-- 				<a href = "write.bo">글쓰기</a><br> -->
@@ -87,10 +88,43 @@
 			
 <%-- 			</c:if>		 --%>
 <%-- 		</c:if> --%>
-				
-				  </div>
-                </div>
 
+
+
+				
+			<form action="${pageContext.request.contextPath}/admin/search">	
+				<div class="card mb-3" style="max-width: 540px;">
+  
+					<div class="card mb-3" style="max-width: 540px;">
+  						<div class="row g-0">
+   							 <div class="col-md-4">
+     							 <img src="${pageContext.request.contextPath}/resources/images/poster/newopen1.jpg"" class="img-fluid rounded-start" alt="...">
+   							 </div>
+    						<div class="col-md-8">
+      							<div class="card-body">
+        							<h4 class="card-title">승인 요청중인 뮤지컬</h4>
+       									 <p class="card-text">
+       									 	
+       									 	
+<!--        									textarea / 파트너가 요청한 뮤지컬 정보가 나왕함 여기선 텍스트 입력 불가 -->
+       										 
+       										 
+
+       													 </p>
+				 										
+				 										<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  															<button class="btn btn-primary me-md-2"  type="submit"  >등록승인</button> &nbsp; &nbsp;
+  																<button class="btn btn-primary" onclick = "location.href='${pageContext.request.contextPath}/admin/editPro'"type="button"  >수정</button>
+														</div>
+    												</div>
+  												</div>
+											</div>
+  										</div>
+  									</div>	
+									</form>
+									</div>
+                </div>
+                </div>
 
 
 <!-- 					<div class="ecommerce-widget">  -->
