@@ -12,7 +12,7 @@
     <div class="d-flex row p-0" id="sticky">
         <ul class="nav justify-content-end pt-3" id="top-nav">
             <li class="nav-item" >
-                <a class="nav-link text-black active" href="${pageContext.request.contextPath}/login/">로그인</a>
+                <a class="nav-link text-black " href="${pageContext.request.contextPath}/login/">로그인</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-black" href="#">회원가입</a>
@@ -38,9 +38,11 @@
                 </form>
             </li>
         </ul>
-        <ul class="nav justify-content-between px-3 mt-3">
+        <ul class="nav justify-content-between  px-3 mt-3">
             <li class="nav-item col-6">
-                <a class="nav-link text-black fw-bold fs-6 px-0" href="#">뮤지컬</a>
+<!--             	뮤지컬 버튼 클릭으로 페이지 연결 -->
+                <a class="nav-link text-black fw-bold fs-6 px-0" href="${pageContext.request.contextPath}/musical/page_main" id="musical_page">뮤지컬</a>
+            	
             </li>
             <li class="nav-item d-flex border-start ps-3">
                 <a class="nav-link text-black fw-bold fs-6" href="#">타임세일</a>
@@ -49,3 +51,4 @@
         </ul>
     </div>
 </header>
+
