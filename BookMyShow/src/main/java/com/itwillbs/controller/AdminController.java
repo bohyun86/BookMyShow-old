@@ -74,6 +74,12 @@ public class AdminController {
     	log.info("admin partner success");
     	return "/admin/partner";
     }
+    
+    @GetMapping("/partner_submit")
+    public String partner_submit() {
+    	log.info("admin partner_submit success");
+    	return "/admin/partner_submit";
+    }
    
     
     @GetMapping("/partnerPro")

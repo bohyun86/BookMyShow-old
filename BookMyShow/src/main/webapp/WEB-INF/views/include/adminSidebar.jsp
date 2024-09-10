@@ -45,6 +45,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="${pageContext.request.contextPath}/admin/partner/">파트너검색</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="${pageContext.request.contextPath}/admin/partner_submit/">파트너 요청승인</a>
+                                </li>
                                
                             </ul>
                         </div>
