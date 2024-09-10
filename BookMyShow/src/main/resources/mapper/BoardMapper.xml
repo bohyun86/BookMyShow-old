@@ -5,6 +5,8 @@
 
 
 <mapper namespace="com.itwillbs.mapper.BoardMapper">
-
+    <select id="getMaxNum" resultType="java.lang.Integer">
+        select max(num) from board
+    </select>
 </mapper>
   

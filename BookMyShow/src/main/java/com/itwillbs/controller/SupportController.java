@@ -16,4 +16,11 @@ public class SupportController {
 
         return "/support/frequentQuestion";
     }
+
+    @GetMapping("/notice/")
+    public String notice() {
+        log.info("notice success");
+
+        return "/notice/notice";
+    }
 }
